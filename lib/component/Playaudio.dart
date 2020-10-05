@@ -1,9 +1,14 @@
 import 'dart:io';
 
+import 'package:double_back_to_close_app/double_back_to_close_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:audioplayer/audioplayer.dart';
+import 'package:primaryschool/page/soundpage/read.dart';
+import 'package:primaryschool/page/soundpage/read2.dart';
+import 'package:primaryschool/page/soundpage/read3.dart';
+import 'package:primaryschool/page/soundpage/read4.dart';
 
 class Playaudio extends StatefulWidget {
   Playaudio({Key key, this.title}) : super(key: key);
@@ -17,6 +22,28 @@ class Playaudio extends StatefulWidget {
 enum PlayerState { stopped, playing, paused }
 
 class _PlayaudioState extends State<Playaudio> {
+  PageController _pageController = PageController();
+  List<Widget> _screen = [
+    ReadSound(),
+    ReadSound2(),
+    ReadSound3(),
+    ReadSound4(),
+    ReadSound4(),
+    ReadSound4(),
+    ReadSound4(),
+    ReadSound4(),
+  ];
+  int _selectedIndex = 0;
+  void _onPageChanged(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  void _onItemTapped(int selectedIndex) {
+    _pageController.jumpToPage(selectedIndex);
+  }
+
   String mp3Uri = '';
   String mp32 = '';
   void _playSound() {
@@ -65,112 +92,183 @@ class _PlayaudioState extends State<Playaudio> {
     _sound1();
   }
 
+  Widget butttonF() {
+    return Container(
+        child: FlatButton(
+            onPressed: null,
+            padding: EdgeInsets.all(0.0),
+            child: Image.asset(
+              'image/f.png',
+              width: 300.0,
+              height: 300.0,
+            )));
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('images/bg2.jpg'), fit: BoxFit.fitHeight)),
-      // child: SafeArea(
-      //   child: Column(
-      //     children: <Widget>[
-      //       Container(
-      //         child: Row(
-      //           children: <Widget>[
-      //             FlatButton(
-      //                 child: Image.asset(
-      //                   'sound/demobile.png',
-      //                   width: 100,
-      //                   height: 200,
-      //                 ),
-      //                 onPressed: () => _playSound()),
-      //             FlatButton(
-      //                 child: Image.asset(
-      //                   'sound/demobile.png',
-      //                   width: 100,
-      //                   height: 200,
-      //                 ),
-      //                 onPressed: () => _playpuase()),
-      //             IconButton(
-      //               icon: Icon(Icons.play_arrow),
-      //               iconSize: 50.0,
-      //               onPressed: () {
-      //                 _playStop();
-      //               },
-      //             )
-      //           ],
-      //         ),
-      //       ),
-      //       Row(
-      //         children: <Widget>[
-      //           IconButton(
-      //             icon: Icon(Icons.play_arrow),
-      //             iconSize: 50.0,
-      //             onPressed: () {
-      //               _playStop();
-      //             },
-      //           )
-      //         ],
-      //       )
-      //     ],
-      //   ),
-      // ),
+    return Scaffold(
+      body: DoubleBackToCloseApp(
+        child: SafeArea(
+          child: Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('images/bg2.jpg'), fit: BoxFit.fill),
+            ),
+            child: PageView(
+              controller: _pageController,
+              children: _screen,
+              onPageChanged: _onPageChanged,
+              physics: NeverScrollableScrollPhysics(),
+            ),
+          ),
 
-      // child: Expanded(
-      //   child: SingleChildScrollView(
-      //     child: Column(
-      //       children: <Widget>[
-      //         InkWell(
-      //           enableFeedback: false,
-      //           child: Container(
-      //             color: Colors.blue,
-      //             child: Text(
-      //               'Play',
-      //               style: TextStyle(color: Colors.white),
-      //             ),
-      //           ),
-      //           onTap: _playSound,
-      //         ),
-      //         InkWell(
-      //           enableFeedback: false,
-      //           child: Container(
-      //             color: Colors.blue,
-      //             child: Text(
-      //               'Play',
-      //               style: TextStyle(color: Colors.white),
-      //             ),
-      //           ),
-      //           onTap: _playSound2,
-      //         ),
-      //         InkWell(
-      //           enableFeedback: false,
-      //           child: Container(
-      //             color: Colors.blue,
-      //             child: Text(
-      //               'Stop',
-      //               style: TextStyle(color: Colors.white),
-      //             ),
-      //           ),
-      //           onTap: _playStop,
-      //         ),
-      //         InkWell(
-      //           enableFeedback: false,
-      //           child: Container(
-      //             color: Colors.blue,
-      //             padding: EdgeInsets.all(20.0),
-      //             child: Text(
-      //               'puase',
-      //               style: TextStyle(color: Colors.white),
-      //             ),
-      //           ),
-      //           onTap: _playpuase,
-      //         ),
-      //       ],
-      //     ),
-      //   ),
-      // ),
+          // child: Expanded(
+          //   child: SingleChildScrollView(
+          //     child: Column(
+          //       children: <Widget>[
+          //         InkWell(
+          //           enableFeedback: false,
+          //           child: Container(
+          //             color: Colors.blue,
+          //             child: Text(
+          //               'Play',
+          //               style: TextStyle(color: Colors.white),
+          //             ),
+          //           ),
+          //           onTap: _playSound,
+          //         ),
+          //         InkWell(
+          //           enableFeedback: false,
+          //           child: Container(
+          //             color: Colors.blue,
+          //             child: Text(
+          //               'Play',
+          //               style: TextStyle(color: Colors.white),
+          //             ),
+          //           ),
+          //           onTap: _playSound2,
+          //         ),
+          //         InkWell(
+          //           enableFeedback: false,
+          //           child: Container(
+          //             color: Colors.blue,
+          //             child: Text(
+          //               'Stop',
+          //               style: TextStyle(color: Colors.white),
+          //             ),
+          //           ),
+          //           onTap: _playStop,
+          //         ),
+          //         InkWell(
+          //           enableFeedback: false,
+          //           child: Container(
+          //             color: Colors.blue,
+          //             padding: EdgeInsets.all(20.0),
+          //             child: Text(
+          //               'puase',
+          //               style: TextStyle(color: Colors.white),
+          //             ),
+          //           ),
+          //           onTap: _playpuase,
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          // ),
 
-      // This trailing comma makes auto-formatting nicer for build methods.
+          // This trailing comma makes auto-formatting nicer for build methods.
+        ),
+        snackBar: const SnackBar(
+          content: Text('ກົດອີກຄັ້ງເພື່ອອອກຈາກໜັງສືສຽງ'),
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        iconSize: 20,
+        unselectedItemColor: Colors.white,
+        backgroundColor: Colors.orange.shade200,
+        type: BottomNavigationBarType.fixed,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.library_books),
+            title: Text(
+              'ຫັດອ່ານ',
+              style: TextStyle(
+                fontFamily: 'lao',
+                fontSize: 12.0,
+              ),
+            ),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.library_books),
+            title: Text(
+              'ບົດທ່ອງ',
+              style: TextStyle(
+                fontFamily: 'lao',
+                fontSize: 12.0,
+              ),
+            ),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.library_books),
+            title: Text(
+              'ນີືທານ',
+            ),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.library_books),
+            title: Text(
+              'ໄວໆນີ້',
+              style: TextStyle(
+                fontFamily: 'lao',
+                fontSize: 12.0,
+              ),
+            ),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.library_books),
+            title: Text(
+              'ໄວໆນີ້',
+              style: TextStyle(
+                fontFamily: 'lao',
+                fontSize: 12.0,
+              ),
+            ),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.library_books),
+            title: Text(
+              'ໄວໆນີ້',
+              style: TextStyle(
+                fontFamily: 'lao',
+                fontSize: 12.0,
+              ),
+            ),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.library_books),
+            title: Text(
+              'ໄວໆນີ້',
+              style: TextStyle(
+                fontFamily: 'lao',
+                fontSize: 12.0,
+              ),
+            ),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.library_books),
+            title: Text(
+              'ໄວໆນີ້',
+              style: TextStyle(
+                fontFamily: 'lao',
+                fontSize: 12.0,
+              ),
+            ),
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.black87,
+        onTap: _onItemTapped,
+      ),
     );
   }
 }
