@@ -28,10 +28,6 @@ class _PlayaudioState extends State<Playaudio> {
     ReadSound2(),
     ReadSound3(),
     ReadSound4(),
-    ReadSound4(),
-    ReadSound4(),
-    ReadSound4(),
-    ReadSound4(),
   ];
   int _selectedIndex = 0;
   void _onPageChanged(int index) {
@@ -70,9 +66,9 @@ class _PlayaudioState extends State<Playaudio> {
   }
 
   void _loadSound() async {
-    final ByteData data = await rootBundle.load('sound/1.mp3');
+    final ByteData data = await rootBundle.load('sound/lesson1.mp3');
     Directory tempDir = await getTemporaryDirectory();
-    File tempFile = File('${tempDir.path}/1.mp3');
+    File tempFile = File('${tempDir.path}/lesson1.mp3');
     await tempFile.writeAsBytes(data.buffer.asUint8List(), flush: true);
     mp3Uri = tempFile.uri.toString();
   }
@@ -110,10 +106,10 @@ class _PlayaudioState extends State<Playaudio> {
       body: DoubleBackToCloseApp(
         child: SafeArea(
           child: Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('images/bg2.jpg'), fit: BoxFit.fill),
-            ),
+            // decoration: BoxDecoration(
+            //   image: DecorationImage(
+            //       image: AssetImage('images/bg2.jpg'), fit: BoxFit.fill),
+            // ),
             child: PageView(
               controller: _pageController,
               children: _screen,
@@ -212,46 +208,6 @@ class _PlayaudioState extends State<Playaudio> {
             icon: Icon(Icons.library_books),
             title: Text(
               'ນີືທານ',
-            ),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.library_books),
-            title: Text(
-              'ໄວໆນີ້',
-              style: TextStyle(
-                fontFamily: 'lao',
-                fontSize: 12.0,
-              ),
-            ),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.library_books),
-            title: Text(
-              'ໄວໆນີ້',
-              style: TextStyle(
-                fontFamily: 'lao',
-                fontSize: 12.0,
-              ),
-            ),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.library_books),
-            title: Text(
-              'ໄວໆນີ້',
-              style: TextStyle(
-                fontFamily: 'lao',
-                fontSize: 12.0,
-              ),
-            ),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.library_books),
-            title: Text(
-              'ໄວໆນີ້',
-              style: TextStyle(
-                fontFamily: 'lao',
-                fontSize: 12.0,
-              ),
             ),
           ),
           BottomNavigationBarItem(

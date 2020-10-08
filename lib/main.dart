@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:primaryschool/page/panel/SubjectGame.dart';
 import 'component/Playaudio.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lession1.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/subjectGame': (context) => SubjectGame(),
         '/Audiobook': (context) => Playaudio(),
+        '/lession1': (context) => Lession1(),
       },
     );
   }

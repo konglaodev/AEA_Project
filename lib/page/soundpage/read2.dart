@@ -19,7 +19,7 @@ class _ReadSound2State extends State<ReadSound2> {
         title:
             Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
           Text(
-            'ຫ້ອງຫັດອ່ານ ແລະ ຟັງໜັງສືສຽງ',
+            'ບົດທ່ອງ',
             style: TextStyle(
                 fontSize: 30,
                 fontFamily: 'lao',
