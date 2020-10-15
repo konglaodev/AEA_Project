@@ -138,7 +138,7 @@ class _ReadSound2State extends State<ReadSound2> {
                       ],
                     ),
                     onTap: () {
-                      Navigator.pushNamed(context, '/lesson9');
+                      Navigator.pushNamed(context, '/lesson10');
                     },
                   ),
                   Divider(),

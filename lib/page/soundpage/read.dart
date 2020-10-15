@@ -263,30 +263,30 @@ class _ReadSoundState extends State<ReadSound> {
                   },
                 ),
                 Divider(),
-                InkWell(
-                  hoverColor: Colors.orange.shade600,
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
-                        child: Text(
-                          'ບົດທີ21 ຊ່ວຍເຫຼືອຜູ້ເຖົ້າ',
-                          style: TextStyle(
-                              fontSize: 20.0, fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      Spacer(),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
-                        child: Icon(Icons.play_arrow),
-                      )
-                    ],
-                  ),
-                  onTap: () {
-                    Navigator.pushNamed(context, '/lesson21');
-                  },
-                ),
-                Divider(),
+                // InkWell(
+                //   hoverColor: Colors.orange.shade600,
+                //   child: Row(
+                //     children: [
+                //       Padding(
+                //         padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                //         child: Text(
+                //           'ບົດທີ21 ຊ່ວຍເຫຼືອຜູ້ເຖົ້າ',
+                //           style: TextStyle(
+                //               fontSize: 20.0, fontWeight: FontWeight.bold),
+                //         ),
+                //       ),
+                //       Spacer(),
+                //       Padding(
+                //         padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                //         child: Icon(Icons.play_arrow),
+                //       )
+                //     ],
+                //   ),
+                //   onTap: () {
+                //     Navigator.pushNamed(context, '/lesson21');
+                //   },
+                // ),
+                // Divider(),
                 InkWell(
                   hoverColor: Colors.orange.shade600,
                   child: Row(
