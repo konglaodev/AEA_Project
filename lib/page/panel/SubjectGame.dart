@@ -12,7 +12,7 @@ class _SubjectGameState extends State<SubjectGame> {
       height: 100,
       child: FlatButton(
         onPressed: () {
-          Navigator.pushNamed(context, '/subject');
+          Navigator.pushNamed(context, '/subandjectGame');
         },
         child: Image.asset('images/btgamebothien.png'),
       ),
@@ -49,7 +49,7 @@ class _SubjectGameState extends State<SubjectGame> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage('images/bg2.jpg'), fit: BoxFit.fill),
+            image: AssetImage('images/bg2.jpg'), fit: BoxFit.cover),
       ),
       child: SafeArea(
         child: Column(

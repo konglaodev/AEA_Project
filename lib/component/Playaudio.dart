@@ -1,10 +1,10 @@
-import 'dart:io';
+// import 'dart:io';
 
 import 'package:double_back_to_close_app/double_back_to_close_app.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:audioplayer/audioplayer.dart';
+// import 'package:flutter/services.dart';
+// import 'package:path_provider/path_provider.dart';
+// import 'package:audioplayer/audioplayer.dart';
 import 'package:primaryschool/page/soundpage/read.dart';
 import 'package:primaryschool/page/soundpage/read2.dart';
 import 'package:primaryschool/page/soundpage/read3.dart';
@@ -19,7 +19,7 @@ class Playaudio extends StatefulWidget {
   _PlayaudioState createState() => _PlayaudioState();
 }
 
-enum PlayerState { stopped, playing, paused }
+// enum PlayerState { stopped, playing, paused }
 
 class _PlayaudioState extends State<Playaudio> {
   PageController _pageController = PageController();
@@ -40,53 +40,53 @@ class _PlayaudioState extends State<Playaudio> {
     _pageController.jumpToPage(selectedIndex);
   }
 
-  String mp3Uri = '';
-  String mp32 = '';
-  void _playSound() {
-    AudioPlayer player = AudioPlayer();
-    player.play(mp3Uri);
-    //
-  }
+//   String mp3Uri = '';
+//   String mp32 = '';
+//   void _playSound() {
+//     AudioPlayer player = AudioPlayer();
+//     player.play(mp3Uri);
+//     //
+//   }
 
-  void _playSound2() {
-    AudioPlayer player = AudioPlayer();
-    player.play(mp32);
-  }
+//   void _playSound2() {
+//     AudioPlayer player = AudioPlayer();
+//     player.play(mp32);
+//   }
 
-  void _playStop() {
-    AudioPlayer player = AudioPlayer();
-    player.stop();
-    //
-  }
+//   void _playStop() {
+//     AudioPlayer player = AudioPlayer();
+//     player.stop();
+//     //
+//   }
 
-  void _playpuase() {
-    AudioPlayer player = AudioPlayer();
-    player.pause();
-    //
-  }
+//   void _playpuase() {
+//     AudioPlayer player = AudioPlayer();
+//     player.pause();
+//     //
+//   }
 
-  void _loadSound() async {
-    final ByteData data = await rootBundle.load('sound/lesson1.mp3');
-    Directory tempDir = await getTemporaryDirectory();
-    File tempFile = File('${tempDir.path}/lesson1.mp3');
-    await tempFile.writeAsBytes(data.buffer.asUint8List(), flush: true);
-    mp3Uri = tempFile.uri.toString();
-  }
+//   void _loadSound() async {
+//     final ByteData data = await rootBundle.load('sound/lesson1.mp3');
+//     Directory tempDir = await getTemporaryDirectory();
+//     File tempFile = File('${tempDir.path}/lesson1.mp3');
+//     await tempFile.writeAsBytes(data.buffer.asUint8List(), flush: true);
+//     mp3Uri = tempFile.uri.toString();
+//   }
 
-  void _sound1() async {
-    final ByteData data = await rootBundle.load('sound/2.mp3');
-    Directory tempDir = await getTemporaryDirectory();
-    File tempFile = File('${tempDir.path}/2.mp3');
-    await tempFile.writeAsBytes(data.buffer.asUint8List(), flush: true);
-    mp32 = tempFile.uri.toString();
-  }
+//   void _sound1() async {
+//     final ByteData data = await rootBundle.load('sound/2.mp3');
+//     Directory tempDir = await getTemporaryDirectory();
+//     File tempFile = File('${tempDir.path}/2.mp3');
+//     await tempFile.writeAsBytes(data.buffer.asUint8List(), flush: true);
+//     mp32 = tempFile.uri.toString();
+//   }
 
-  @override
-  void initState() {
-    super.initState();
-    _loadSound();
-    _sound1();
-  }
+//   @override
+//   void initState() {
+//     super.initState();
+//     _loadSound();
+//     _sound1();
+//   }
 
   Widget butttonF() {
     return Container(
@@ -187,7 +187,7 @@ class _PlayaudioState extends State<Playaudio> {
           BottomNavigationBarItem(
             icon: Icon(Icons.library_books),
             title: Text(
-              'ຫັດອ່ານ',
+              'ບົດເລື່ອງ',
               style: TextStyle(
                 fontFamily: 'lao',
                 fontSize: 12.0,
@@ -197,7 +197,7 @@ class _PlayaudioState extends State<Playaudio> {
           BottomNavigationBarItem(
             icon: Icon(Icons.library_books),
             title: Text(
-              'ບົດທ່ອງ',
+              'ບົດກາບກອນ',
               style: TextStyle(
                 fontFamily: 'lao',
                 fontSize: 12.0,

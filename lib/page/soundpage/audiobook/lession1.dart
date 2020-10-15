@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:primaryschool/component/Playaudio.dart';
 import 'dart:io';
 
 import 'package:flutter/services.dart';
@@ -25,11 +24,6 @@ class _Lession1State extends State<Lession1> {
     AudioPlayer player = AudioPlayer();
     player.play(mp3Uri);
     //
-  }
-
-  void _playSound2() {
-    AudioPlayer player = AudioPlayer();
-    player.play(mp32);
   }
 
   void _playStop() {
@@ -79,7 +73,7 @@ class _Lession1State extends State<Lession1> {
         appBar: AppBar(
           backgroundColor: Colors.orange.shade700,
           elevation: 0.0,
-          title: Text('ບົດທີ1'),
+          title: Text('ບົດທີ1 ບົດເລື່ອງທ້າວສົມຈິດ'),
         ),
         body: Container(
           child: SafeArea(
@@ -91,7 +85,7 @@ class _Lession1State extends State<Lession1> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          'contentaudiobook/lesson1.PNG',
+                          'images/bot1.jpg',
                         ),
                       ],
                     ),

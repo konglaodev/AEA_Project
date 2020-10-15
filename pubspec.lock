@@ -14,7 +14,7 @@ packages:
       name: audioplayer
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.5.2"
+    version: "0.8.1"
   boolean_selector:
     dependency: transitive
     description:
