@@ -82,8 +82,8 @@ class _SubandgameState extends State<Subandgame> {
             children: [back()],
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [firstbutton(), star(), secondbutton()],
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [firstbutton(), secondbutton()],
           ),
           SizedBox(
             height: 20,

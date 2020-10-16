@@ -6,7 +6,7 @@ class SubjectGame extends StatefulWidget {
 }
 
 class _SubjectGameState extends State<SubjectGame> {
-  Widget buttonsubjectgame() {
+  Widget bothienandgame() {
     return SizedBox(
       width: 250,
       height: 100,
@@ -19,7 +19,7 @@ class _SubjectGameState extends State<SubjectGame> {
     );
   }
 
-  Widget buttonspacial() {
+  Widget buttonaudiobook() {
     return SizedBox(
       height: 100,
       width: 300,
@@ -61,11 +61,10 @@ class _SubjectGameState extends State<SubjectGame> {
               ],
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
-                buttonsubjectgame(),
-                SizedBox(width: 50.0),
-                buttonspacial(),
+                bothienandgame(),
+                buttonaudiobook(),
               ],
             ),
             SizedBox(

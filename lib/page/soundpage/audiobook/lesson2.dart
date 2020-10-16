@@ -75,8 +75,11 @@ class _Lession2State extends State<Lession2> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image.asset(
-                          'contentaudiobook/lesson2.png',
+                        SizedBox(
+                          width: 700.0,
+                          child: Image.asset(
+                            'images/2.1.jpg',
+                          ),
                         ),
                       ],
                     ),

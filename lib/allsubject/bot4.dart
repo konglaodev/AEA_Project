@@ -30,20 +30,27 @@ class _Bot4State extends State<Bot4> {
               child: Column(
                 children: <Widget>[
                   Container(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image.asset(
-                          'images/4.1.jpg',
-                        ),
-                        Image.asset(
-                          'images/4.2.jpg',
-                        ),
-                        Image.asset(
-                          'images/4.3.jpg',
-                        ),
-                        Image.asset(
-                          'images/4.4.jpg',
+                        SizedBox(
+                          width: 700,
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                'images/4.1.jpg',
+                              ),
+                              Image.asset(
+                                'images/4.2.jpg',
+                              ),
+                              Image.asset(
+                                'images/4.3.jpg',
+                              ),
+                              Image.asset(
+                                'images/4.4.jpg',
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),

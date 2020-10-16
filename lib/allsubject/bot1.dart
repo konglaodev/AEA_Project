@@ -46,7 +46,7 @@ class _Bot1State extends State<Bot1> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Image.asset(
-                            'images/bot1.jpg',
+                            'images/1.1.jpg',
                           ),
                           Image.asset(
                             'images/1.2.jpg',

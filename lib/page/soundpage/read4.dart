@@ -7,7 +7,6 @@ class ReadSound4 extends StatefulWidget {
 
 const mystyletext = TextStyle(
   fontSize: 50.0,
-  backgroundColor: Color.fromARGB(255, 168, 135, 10),
 );
 
 class _ReadSound4State extends State<ReadSound4> {

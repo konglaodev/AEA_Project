@@ -19,7 +19,7 @@ const mystyletext = TextStyle(
 
 class _Lession1State extends State<Lession1> {
   String mp3Uri = '';
-  String mp32 = '';
+
   void _playSound() {
     AudioPlayer player = AudioPlayer();
     player.play(mp3Uri);
@@ -46,19 +46,10 @@ class _Lession1State extends State<Lession1> {
     mp3Uri = tempFile.uri.toString();
   }
 
-  void _sound1() async {
-    final ByteData data = await rootBundle.load('sound/2.mp3');
-    Directory tempDir = await getTemporaryDirectory();
-    File tempFile = File('${tempDir.path}/2.mp3');
-    await tempFile.writeAsBytes(data.buffer.asUint8List(), flush: true);
-    mp32 = tempFile.uri.toString();
-  }
-
   @override
   void initState() {
     super.initState();
     _loadSound();
-    _sound1();
   }
 
   @override
@@ -84,8 +75,11 @@ class _Lession1State extends State<Lession1> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image.asset(
-                          'images/bot1.jpg',
+                        SizedBox(
+                          width: 700,
+                          child: Image.asset(
+                            'images/1.1.jpg',
+                          ),
                         ),
                       ],
                     ),

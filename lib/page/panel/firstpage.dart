@@ -8,12 +8,15 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   Widget text() {
-    return Text(
-      'ຍີນດີຕ້ອນຮັບເຂົ້າສູ່ຫ້ອງຮຽນເອເລັກໂຕນີກ',
-      style: TextStyle(
-          decoration: TextDecoration.none,
-          color: Colors.black87,
-          fontSize: 30.0),
+    return SizedBox(
+      height: 70.0,
+      child: Text(
+        'ຍີນດີຕ້ອນຮັບເຂົ້າສູ່ຫ້ອງຮຽນເອເລັກໂຕນີກ',
+        style: TextStyle(
+            decoration: TextDecoration.none,
+            color: Colors.black87,
+            fontSize: 30.0),
+      ),
     );
   }
 
@@ -38,20 +41,18 @@ class _HomePageState extends State<HomePage> {
       child: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            SizedBox(
-              height: 30.0,
-            ),
             text(),
-            SizedBox(
-              height: 70,
-            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 play(),
               ],
-            )
+            ),
+            SizedBox(
+              height: 70,
+            ),
           ],
         ),
       ),
