@@ -1,11 +1,14 @@
 # primaryschool
 
-A new Flutter project.
+clone project
+open project 
+open terminal 
+use command
+flutter pub get 
+flutter run 
+than using my project to development
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
+## Getting Starte
 A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
