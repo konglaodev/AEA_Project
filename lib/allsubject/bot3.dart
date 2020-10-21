@@ -34,16 +34,16 @@ class _Bot3State extends State<Bot3> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Image.asset(
-                          'images/2.1.jpg',
+                          'images/3.1.jpg',
                         ),
                         Image.asset(
-                          'images/2.2.jpg',
+                          'images/3.2.jpg',
                         ),
                         Image.asset(
-                          'images/2.3.jpg',
+                          'images/3.3.jpg',
                         ),
                         Image.asset(
-                          'images/2.4.jpg',
+                          'images/3.4.jpg',
                         ),
                       ],
                     ),
