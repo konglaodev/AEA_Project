@@ -20,6 +20,8 @@ dependencies:
   cupertino_icons: ^0.1.3
   path_provider: ^1.6.18
   audioplayer: ^0.8.1
+  rflutter_alert: ^1.1.0
+  flip_card: ^0.4.4
   double_back_to_close_app: ^1.2.0
 dev_dependencies:
   flutter_test:
@@ -42,6 +44,7 @@ flutter:
     - images/
     - images/bgm/
     - contentaudiobook/
+    - assets/animalspics/.
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

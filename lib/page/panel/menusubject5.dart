@@ -40,7 +40,7 @@ class _Menusub5State extends State<Menusub5> {
               image: AssetImage('images/bgm/menu5.png'), fit: BoxFit.cover)),
       child: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

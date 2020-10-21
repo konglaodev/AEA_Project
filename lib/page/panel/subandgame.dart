@@ -8,17 +8,25 @@ class Subandgame extends StatefulWidget {
 }
 
 class _SubandgameState extends State<Subandgame> {
+  Widget title() {
+    return Text(
+      'ບົດຮຽນ ແລະ ເກມ',
+      style: TextStyle(
+          decoration: TextDecoration.none,
+          color: Colors.white,
+          fontSize: 50.0,
+          fontWeight: FontWeight.bold),
+    );
+  }
+
   Widget firstbutton() {
     return Container(
       child: FlatButton(
         onPressed: () {
-          Navigator.pushNamed(context, '/menusub');
+          Navigator.pushNamed(context,'/menusub');
         },
-        child: Image.asset(
-          'images/bothien.png',
-          width: 195.0,
-          height: 110.0,
-        ),
+        child: Image.asset('images/bothien.png',width: 200.0,
+            height: 200.0,),
       ),
     );
   }
@@ -31,8 +39,8 @@ class _SubandgameState extends State<Subandgame> {
           },
           child: Image.asset(
             "images/iconbtgame.png",
-            width: 195.0,
-            height: 110.0,
+            width: 200.0,
+            height: 200.0,
           )),
     );
   }
@@ -41,7 +49,7 @@ class _SubandgameState extends State<Subandgame> {
     return Container(
       child: FlatButton(
         onPressed: () {
-          Navigator.pop(context);
+          Navigator.pushNamed(context,'/subjectGame');
         },
         child: Image.asset(
           "images/backbt.png",
@@ -75,20 +83,29 @@ class _SubandgameState extends State<Subandgame> {
       decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage("images/bg.jpg"), fit: BoxFit.cover)),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Row(
-            children: [back()],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [firstbutton(), secondbutton()],
-          ),
-          SizedBox(
-            height: 20,
-          )
-        ],
+      child: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            SizedBox(
+              height: 20.0,
+            ),
+            Row(
+              children: [back()],
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [title()],
+            ),
+            SizedBox(
+              height: 100.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [firstbutton(), star(), secondbutton()],
+            )
+          ],
+        ),
       ),
     );
   }

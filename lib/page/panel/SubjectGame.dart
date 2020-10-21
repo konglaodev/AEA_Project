@@ -37,7 +37,7 @@ class _SubjectGameState extends State<SubjectGame> {
       height: 50,
       child: FlatButton(
         onPressed: () {
-          Navigator.pop(context);
+         Navigator.pushNamed(context, '/Home');
         },
         child: Image.asset('images/backbt.png'),
       ),

@@ -2,6 +2,8 @@ import 'package:primaryschool/page/panel/firstpage.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:primaryschool/page/panel/SubjectGame.dart';
+import 'package:primaryschool/page/panel/game/game2.dart';
+import 'package:primaryschool/page/panel/game/random.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson6.dart';
 import 'component/Playaudio.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lession1.dart';
@@ -106,6 +108,10 @@ import 'package:primaryschool/page/panel/menusubject4.dart';
 import 'package:primaryschool/page/panel/menusubject5.dart';
 import 'package:primaryschool/page/panel/menusubject6.dart';
 import 'package:primaryschool/page/panel/menusubject7.dart';
+import 'package:primaryschool/page/panel/game.dart';
+import 'package:primaryschool/page/panel/game/gamelesson1.dart';
+import 'package:primaryschool/page/panel/gamebt1.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -228,6 +234,13 @@ class MyApp extends StatelessWidget {
         '/bot64': (context) => Bot64(),
         '/bot65': (context) => Bot65(),
         '/bot66': (context) => Bot66(),
+        //game
+         '/game': (context) => Game(), //nar game
+        '/gamebt': (context) => Gamebt(), //nar game bod thrng
+        '/gamefirstlesson': (context) => Gamelessonone(),
+         '/Home': (context) => HomePage(),
+         '/randombt': (context) => Randomimg(),
+         '/randomtwo': (context) => Gametwo(),
       },
     );
   }
