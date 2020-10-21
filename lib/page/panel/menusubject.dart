@@ -31,8 +31,9 @@ class _MenusubState extends State<Menusub> {
       ),
     );
   }
- Widget homebtn(){
-   return FlatButton(
+
+  Widget homebtn() {
+    return FlatButton(
       onPressed: () {
         Navigator.pushNamed(context, '/subandjectGame');
       },
@@ -41,8 +42,7 @@ class _MenusubState extends State<Menusub> {
         width: 180.0,
       ),
     );
- }
-
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,15 +52,15 @@ class _MenusubState extends State<Menusub> {
               image: AssetImage('images/bgm/menu1.jpg'), fit: BoxFit.cover)),
       child: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[   SizedBox(
-                      height: 50.0,
-                    ),
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            SizedBox(
+              height: 50.0,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Column(
-                  
                   children: <Widget>[
                     FlatButton(
                       child: Image.asset(
@@ -183,9 +183,6 @@ class _MenusubState extends State<Menusub> {
                   ],
                 ),
               ],
-            ),
-            SizedBox(
-              height: 50.0,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,

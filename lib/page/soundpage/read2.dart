@@ -286,6 +286,54 @@ class _ReadSound2State extends State<ReadSound2> {
                     },
                   ),
                   Divider(),
+                  InkWell(
+                    hoverColor: Colors.orange.shade600,
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                          child: Text(
+                            'ບົດທີ52 ປະໂຫຍດຂອງສັດລາກແກ່',
+                            style: TextStyle(
+                                fontSize: 20.0, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Spacer(),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                          child: Icon(Icons.play_arrow),
+                        )
+                      ],
+                    ),
+                    onTap: () {
+                      Navigator.pushNamed(context, '/lesson52');
+                    },
+                  ),
+                  Divider(),
+                  InkWell(
+                    hoverColor: Colors.orange.shade600,
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                          child: Text(
+                            'ບົດທີ58 ທຳມະຊາດຍາມແລງ',
+                            style: TextStyle(
+                                fontSize: 20.0, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Spacer(),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                          child: Icon(Icons.play_arrow),
+                        )
+                      ],
+                    ),
+                    onTap: () {
+                      Navigator.pushNamed(context, '/lesson58');
+                    },
+                  ),
+                  Divider(),
                 ],
               ),
             ],

@@ -161,6 +161,150 @@ class _ReadSound3State extends State<ReadSound3> {
               },
             ),
             Divider(),
+            InkWell(
+              hoverColor: Colors.orange.shade600,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                    child: Text(
+                      'ບົດທີ51 ກາ ແລະ ນົກຍູງ',
+                      style: TextStyle(
+                          fontSize: 20.0, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                    child: Icon(Icons.play_arrow),
+                  )
+                ],
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, '/lesson51');
+              },
+            ),
+            Divider(),
+            InkWell(
+              hoverColor: Colors.orange.shade600,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                    child: Text(
+                      'ບົດທີ55 ກວາງ ແລະ ມ້າ',
+                      style: TextStyle(
+                          fontSize: 20.0, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                    child: Icon(Icons.play_arrow),
+                  )
+                ],
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, '/lesson55');
+              },
+            ),
+            Divider(),
+            InkWell(
+              hoverColor: Colors.orange.shade600,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                    child: Text(
+                      'ບົດທີ59 ນາກກັບໝາໄນ',
+                      style: TextStyle(
+                          fontSize: 20.0, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                    child: Icon(Icons.play_arrow),
+                  )
+                ],
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, '/lesson59');
+              },
+            ),
+            Divider(),
+            InkWell(
+              hoverColor: Colors.orange.shade600,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                    child: Text(
+                      'ບົດທີ60 ມົດຍ້າຍຮັງ',
+                      style: TextStyle(
+                          fontSize: 20.0, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                    child: Icon(Icons.play_arrow),
+                  )
+                ],
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, '/lesson60');
+              },
+            ),
+            Divider(),
+            InkWell(
+              hoverColor: Colors.orange.shade600,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                    child: Text(
+                      'ບົດທີ61 ນົກຈິບເຟືອງຮຽນເຮັດຮັງ',
+                      style: TextStyle(
+                          fontSize: 20.0, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                    child: Icon(Icons.play_arrow),
+                  )
+                ],
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, '/lesson61');
+              },
+            ),
+            Divider(),
+            InkWell(
+              hoverColor: Colors.orange.shade600,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                    child: Text(
+                      'ບົດທີ66 ພະຍານາກໄດ້ຕັບກະຕ່າຍ',
+                      style: TextStyle(
+                          fontSize: 20.0, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                    child: Icon(Icons.play_arrow),
+                  )
+                ],
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, '/lesson66');
+              },
+            ),
+            Divider(),
           ]),
         ),
       ),

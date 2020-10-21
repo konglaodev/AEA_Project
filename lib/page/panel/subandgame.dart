@@ -23,10 +23,13 @@ class _SubandgameState extends State<Subandgame> {
     return Container(
       child: FlatButton(
         onPressed: () {
-          Navigator.pushNamed(context,'/menusub');
+          Navigator.pushNamed(context, '/menusub');
         },
-        child: Image.asset('images/bothien.png',width: 200.0,
-            height: 200.0,),
+        child: Image.asset(
+          'images/bothien.png',
+          width: 200.0,
+          height: 200.0,
+        ),
       ),
     );
   }
@@ -49,7 +52,7 @@ class _SubandgameState extends State<Subandgame> {
     return Container(
       child: FlatButton(
         onPressed: () {
-          Navigator.pushNamed(context,'/subjectGame');
+          Navigator.pushNamed(context, '/subjectGame');
         },
         child: Image.asset(
           "images/backbt.png",
@@ -85,11 +88,8 @@ class _SubandgameState extends State<Subandgame> {
               image: AssetImage("images/bg.jpg"), fit: BoxFit.cover)),
       child: Center(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            SizedBox(
-              height: 20.0,
-            ),
             Row(
               children: [back()],
             ),
@@ -97,12 +97,12 @@ class _SubandgameState extends State<Subandgame> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [title()],
             ),
-            SizedBox(
-              height: 100.0,
-            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [firstbutton(), star(), secondbutton()],
+            ),
+            SizedBox(
+              height: 50,
             )
           ],
         ),

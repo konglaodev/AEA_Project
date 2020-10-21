@@ -23,6 +23,8 @@ import 'package:primaryschool/page/soundpage/audiobook/lesson17.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson18.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson19.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson20.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson21.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson22.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson34.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson37.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson38.dart';
@@ -35,6 +37,21 @@ import 'package:primaryschool/page/soundpage/audiobook/lesson45.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson46.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson47.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson48.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson51.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson52.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson53.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson54.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson55.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson56.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson57.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson58.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson59.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson60.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson61.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson62.dart';
+
+import 'package:primaryschool/page/soundpage/audiobook/lesson64.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson66.dart';
 import 'allsubject/bot1.dart';
 import 'allsubject/bot2.dart';
 import 'allsubject/bot3.dart';
@@ -112,7 +129,6 @@ import 'package:primaryschool/page/panel/game.dart';
 import 'package:primaryschool/page/panel/game/gamelesson1.dart';
 import 'package:primaryschool/page/panel/gamebt1.dart';
 
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -122,15 +138,17 @@ class MyApp extends StatelessWidget {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.landscapeLeft,
       DeviceOrientation.landscapeRight,
-    ]);
+    ]); //set landscape app
 
     return MaterialApp(
-      theme: ThemeData(fontFamily: 'lao'),
+      theme: ThemeData(fontFamily: 'lao'), //setfont app
       debugShowCheckedModeBanner: false,
       home: HomePage(),
       routes: {
+        //panel
         '/subjectGame': (context) => SubjectGame(),
         '/subandjectGame': (context) => Subandgame(),
+        //audiobook page
         '/Audiobook': (context) => Playaudio(),
         '/lession1': (context) => Lession1(),
         '/lesson2': (context) => Lession2(),
@@ -149,6 +167,8 @@ class MyApp extends StatelessWidget {
         '/lesson18': (context) => Lesson18(),
         '/lesson19': (context) => Lesson19(),
         '/lesson20': (context) => Lesson20(),
+        '/lesson21': (context) => Lesson21(),
+        '/lesson22': (context) => Lesson22(),
         '/lesson34': (context) => Lesson34(),
         '/lesson37': (context) => Lesson37(),
         '/lesson38': (context) => Lesson38(),
@@ -161,6 +181,22 @@ class MyApp extends StatelessWidget {
         '/lesson46': (context) => Lesson46(),
         '/lesson47': (context) => Lesson47(),
         '/lesson48': (context) => Lesson48(),
+        '/lesson51': (context) => Lesson51(),
+        '/lesson52': (context) => Lesson52(),
+        '/lesson53': (context) => Lesson53(),
+        '/lesson54': (context) => Lesson54(),
+        '/lesson55': (context) => Lesson55(),
+        '/lesson56': (context) => Lesson56(),
+        '/lesson57': (context) => Lesson57(),
+        '/lesson58': (context) => Lesson58(),
+        '/lesson59': (context) => Lesson59(),
+        '/lesson60': (context) => Lesson60(),
+        '/lesson61': (context) => Lesson61(),
+        '/lesson62': (context) => Lesson62(),
+
+        '/lesson64': (context) => Lesson64(),
+        '/lesson66': (context) => Lesson66(),
+        //menu bothien
         '/menusub': (context) => Menusub(),
         '/menusub2': (context) => Menusub2(),
         '/menusub3': (context) => Menusub3(),
@@ -168,6 +204,7 @@ class MyApp extends StatelessWidget {
         '/menusub5': (context) => Menusub5(),
         '/menusub6': (context) => Menusub6(),
         '/menusub7': (context) => Menusub7(),
+        //bothien
         '/bot1': (context) => Bot1(),
         '/bot2': (context) => Bot2(),
         '/bot3': (context) => Bot3(),
@@ -235,12 +272,12 @@ class MyApp extends StatelessWidget {
         '/bot65': (context) => Bot65(),
         '/bot66': (context) => Bot66(),
         //game
-         '/game': (context) => Game(), //nar game
+        '/game': (context) => Game(), //nar game
         '/gamebt': (context) => Gamebt(), //nar game bod thrng
         '/gamefirstlesson': (context) => Gamelessonone(),
-         '/Home': (context) => HomePage(),
-         '/randombt': (context) => Randomimg(),
-         '/randomtwo': (context) => Gametwo(),
+        '/Home': (context) => HomePage(),
+        '/randombt': (context) => Randomimg(),
+        '/randomtwo': (context) => Gametwo(),
       },
     );
   }

@@ -263,30 +263,30 @@ class _ReadSoundState extends State<ReadSound> {
                   },
                 ),
                 Divider(),
-                // InkWell(
-                //   hoverColor: Colors.orange.shade600,
-                //   child: Row(
-                //     children: [
-                //       Padding(
-                //         padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
-                //         child: Text(
-                //           'ບົດທີ21 ຊ່ວຍເຫຼືອຜູ້ເຖົ້າ',
-                //           style: TextStyle(
-                //               fontSize: 20.0, fontWeight: FontWeight.bold),
-                //         ),
-                //       ),
-                //       Spacer(),
-                //       Padding(
-                //         padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
-                //         child: Icon(Icons.play_arrow),
-                //       )
-                //     ],
-                //   ),
-                //   onTap: () {
-                //     Navigator.pushNamed(context, '/lesson21');
-                //   },
-                // ),
-                // Divider(),
+                InkWell(
+                  hoverColor: Colors.orange.shade600,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                        child: Text(
+                          'ບົດທີ21 ຊ່ວຍເຫຼືອຜູ້ເຖົ້າ',
+                          style: TextStyle(
+                              fontSize: 20.0, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                        child: Icon(Icons.play_arrow),
+                      )
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/lesson21');
+                  },
+                ),
+                Divider(),
                 InkWell(
                   hoverColor: Colors.orange.shade600,
                   child: Row(
@@ -403,7 +403,7 @@ class _ReadSoundState extends State<ReadSound> {
                     ],
                   ),
                   onTap: () {
-                    Navigator.pushNamed(context, '/lesson7');
+                    Navigator.pushNamed(context, '/lesson42');
                   },
                 ),
                 Divider(),
@@ -452,6 +452,126 @@ class _ReadSoundState extends State<ReadSound> {
                   ),
                   onTap: () {
                     Navigator.pushNamed(context, '/lesson45');
+                  },
+                ),
+                Divider(),
+                InkWell(
+                  hoverColor: Colors.orange.shade600,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                        child: Text(
+                          'ບົດທີ53 ລະດູການຂອງປະເທດເຮົາ',
+                          style: TextStyle(
+                              fontSize: 20.0, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                        child: Icon(Icons.play_arrow),
+                      )
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/lesson53');
+                  },
+                ),
+                Divider(),
+                InkWell(
+                  hoverColor: Colors.orange.shade600,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                        child: Text(
+                          'ບົດທີ54 ປະໂຫຍດຂອງໄມ່ໄຜ່',
+                          style: TextStyle(
+                              fontSize: 20.0, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                        child: Icon(Icons.play_arrow),
+                      )
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/lesson54');
+                  },
+                ),
+                Divider(),
+                InkWell(
+                  hoverColor: Colors.orange.shade600,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                        child: Text(
+                          'ບົດທີ56 ທຳມະຊາດ ແລະ ຊີວິດ ',
+                          style: TextStyle(
+                              fontSize: 20.0, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                        child: Icon(Icons.play_arrow),
+                      )
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/lesson56');
+                  },
+                ),
+                Divider(),
+                InkWell(
+                  hoverColor: Colors.orange.shade600,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                        child: Text(
+                          'ບົດທີ62 ພະຍາດໃນຍາມຝົນ',
+                          style: TextStyle(
+                              fontSize: 20.0, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                        child: Icon(Icons.play_arrow),
+                      )
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/lesson62');
+                  },
+                ),
+                Divider(),
+                InkWell(
+                  hoverColor: Colors.orange.shade600,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                        child: Text(
+                          'ບົດທີ64 ມື້ສຸດທ້າຍຂອງປີຮຽນ',
+                          style: TextStyle(
+                              fontSize: 20.0, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                        child: Icon(Icons.play_arrow),
+                      )
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/lesson64');
                   },
                 ),
                 Divider(),
