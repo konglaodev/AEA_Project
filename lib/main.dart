@@ -25,12 +25,24 @@ import 'package:primaryschool/page/soundpage/audiobook/lesson19.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson20.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson21.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson22.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson23.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson24.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson25.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson26.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson27.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson28.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson29.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson30.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson31.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson32.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson33.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson34.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson37.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson38.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson39.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson40.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson41.dart';
+import 'package:primaryschool/page/soundpage/audiobook/lesson42.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson43.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson44.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson45.dart';
@@ -169,12 +181,24 @@ class MyApp extends StatelessWidget {
         '/lesson20': (context) => Lesson20(),
         '/lesson21': (context) => Lesson21(),
         '/lesson22': (context) => Lesson22(),
+        '/lesson23': (context) => Lesson23(),
+        '/lesson24': (context) => Lesson24(),
+        '/lesson25': (context) => Lesson25(),
+        '/lesson26': (context) => Lesson26(),
+        '/lesson27': (context) => Lesson27(),
+        '/lesson28': (context) => Lesson28(),
+        '/lesson29': (context) => Lesson29(),
+        '/lesson30': (context) => Lesson30(),
+        '/lesson31': (context) => Lesson31(),
+        '/lesson32': (context) => Lesson32(),
+        '/lesson33': (context) => Lesson33(),
         '/lesson34': (context) => Lesson34(),
         '/lesson37': (context) => Lesson37(),
         '/lesson38': (context) => Lesson38(),
         '/lesson39': (context) => Lesson39(),
         '/lesson40': (context) => Lesson40(),
         '/lesson41': (context) => Lesson41(),
+        '/lesson42': (context) => Lesson42(),
         '/lesson43': (context) => Lesson43(),
         '/lesson44': (context) => Lesson44(),
         '/lesson45': (context) => Lesson45(),

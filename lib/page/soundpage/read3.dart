@@ -112,6 +112,54 @@ class _ReadSound3State extends State<ReadSound3> {
               },
             ),
             Divider(),
+            InkWell(
+              hoverColor: Colors.orange.shade600,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                    child: Text(
+                      'ບົດທີ28 ໜູບ້ານກັບໜູນາ',
+                      style: TextStyle(
+                          fontSize: 20.0, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                    child: Icon(Icons.play_arrow),
+                  )
+                ],
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, '/lesson28');
+              },
+            ),
+            Divider(),
+            InkWell(
+              hoverColor: Colors.orange.shade600,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                    child: Text(
+                      'ບົດທີ31 ປັນຍາມົດງ່າ',
+                      style: TextStyle(
+                          fontSize: 20.0, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                    child: Icon(Icons.play_arrow),
+                  )
+                ],
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, '/lesson31');
+              },
+            ),
+            Divider(),
             //continue
             InkWell(
               hoverColor: Colors.orange.shade600,

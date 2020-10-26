@@ -65,15 +65,7 @@ class _ReadSoundState extends State<ReadSound> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(
-            Icons.home,
-            color: Colors.orangeAccent,
-          ),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+        shadowColor: Colors.black,
         title: Text(
           'ບົດເລື່ອງ',
           style: TextStyle(
@@ -82,8 +74,7 @@ class _ReadSoundState extends State<ReadSound> {
               color: Color.fromARGB(255, 184, 133, 13),
               fontWeight: FontWeight.bold),
         ),
-        backgroundColor: Colors.white,
-        elevation: 0.3,
+        backgroundColor: Colors.white10,
       ),
       body: Container(
         child: SafeArea(
@@ -284,6 +275,198 @@ class _ReadSoundState extends State<ReadSound> {
                   ),
                   onTap: () {
                     Navigator.pushNamed(context, '/lesson21');
+                  },
+                ),
+                Divider(),
+                InkWell(
+                  hoverColor: Colors.orange.shade600,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                        child: Text(
+                          'ບົດທີ23 ໝາ ແລະ ຕ່ອນຊີ້ນ',
+                          style: TextStyle(
+                              fontSize: 20.0, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                        child: Icon(Icons.play_arrow),
+                      )
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/lesson23');
+                  },
+                ),
+                Divider(),
+                InkWell(
+                  hoverColor: Colors.orange.shade600,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                        child: Text(
+                          'ບົດທີ24 ຄຳຮ້ອງ',
+                          style: TextStyle(
+                              fontSize: 20.0, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                        child: Icon(Icons.play_arrow),
+                      )
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/lesson24');
+                  },
+                ),
+                Divider(),
+                InkWell(
+                  hoverColor: Colors.orange.shade600,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                        child: Text(
+                          'ບົດທີ25 ຕະຫຼາດນັດເຂດພູດອຍ',
+                          style: TextStyle(
+                              fontSize: 20.0, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                        child: Icon(Icons.play_arrow),
+                      )
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/lesson25');
+                  },
+                ),
+                Divider(),
+                InkWell(
+                  hoverColor: Colors.orange.shade600,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                        child: Text(
+                          'ບົດທີ26 ບຸນເກີຂອງເຜົ່າກືມມຸ',
+                          style: TextStyle(
+                              fontSize: 20.0, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                        child: Icon(Icons.play_arrow),
+                      )
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/lesson26');
+                  },
+                ),
+                Divider(),
+                InkWell(
+                  hoverColor: Colors.orange.shade600,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                        child: Text(
+                          'ບົດທີ27 ບຸນກີນຈຽງຂອງເຜົ່າມົ້ງ',
+                          style: TextStyle(
+                              fontSize: 20.0, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                        child: Icon(Icons.play_arrow),
+                      )
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/lesson27');
+                  },
+                ),
+                Divider(),
+                InkWell(
+                  hoverColor: Colors.orange.shade600,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                        child: Text(
+                          'ບົດທີ29 ທາງເຂົ້າບ້ານ',
+                          style: TextStyle(
+                              fontSize: 20.0, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                        child: Icon(Icons.play_arrow),
+                      )
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/lesson29');
+                  },
+                ),
+                Divider(),
+                InkWell(
+                  hoverColor: Colors.orange.shade600,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                        child: Text(
+                          'ບົດທີ32 ໝູປ້າຈັນ',
+                          style: TextStyle(
+                              fontSize: 20.0, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                        child: Icon(Icons.play_arrow),
+                      )
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/lesson32');
+                  },
+                ),
+                Divider(),
+                InkWell(
+                  hoverColor: Colors.orange.shade600,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                        child: Text(
+                          'ບົດທີ33 ອາຊີບຊາວສວນ',
+                          style: TextStyle(
+                              fontSize: 20.0, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                        child: Icon(Icons.play_arrow),
+                      )
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/lesson33');
                   },
                 ),
                 Divider(),

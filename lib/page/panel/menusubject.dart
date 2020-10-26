@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:primaryschool/page/panel/SubjectGame.dart';
+import 'package:primaryschool/page/panel/firstpage.dart';
 
 class Menusub extends StatefulWidget {
   Menusub({Key key}) : super(key: key);
@@ -35,7 +37,13 @@ class _MenusubState extends State<Menusub> {
   Widget homebtn() {
     return FlatButton(
       onPressed: () {
-        Navigator.pushNamed(context, '/subandjectGame');
+        // Navigator.pushAndRemoveUntil(
+        //   context,
+        //   MaterialPageRoute(builder: (BuildContext context) => SubjectGame()),
+        //   ModalRoute.withName('/subjectGame'),
+        // );
+        Navigator.pushNamedAndRemoveUntil(
+            context, '/subjectGame', ModalRoute.withName('/b'));
       },
       child: Image.asset(
         "images/homepage.png",

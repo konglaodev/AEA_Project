@@ -21,14 +21,23 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget play() {
-    return SizedBox(
-        width: 200,
-        height: 100,
+    return CircleAvatar(
+      backgroundColor: Colors.white,
+      foregroundColor: Colors.orangeAccent,
+      radius: 60,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(15, 0, 0, 0),
         child: FlatButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/subjectGame');
-            },
-            child: Image.asset('images/playbt.png')));
+          onPressed: () {
+            Navigator.pushNamed(context, '/subjectGame');
+          },
+          child: Image.asset(
+            'images/playbt.png',
+            width: 120,
+          ),
+        ),
+      ),
+    );
   }
 
   @override

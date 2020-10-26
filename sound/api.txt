@@ -1,0 +1,146 @@
+ final String apiUrl = "https://reqres.in/api/users?page=2";
+
+  Future<List<dynamic>> fetchUsers() async {
+    var result = await http.get(apiUrl);
+    return json.decode(result.body)['data'];
+  }
+
+  String _name(dynamic user) {
+    return
+      user['first_name'];
+  }
+
+  String _location(dynamic user) {
+    return user['location']['country'];
+  }
+
+  String _age(Map<dynamic, dynamic> user) {
+    return "Age: " + user['last_name'].toString();
+  }
+
+
+--------------------------------
+
+Widget ItemCard() {
+    return ConstrainedBox(
+      constraints: const BoxConstraints(
+        maxHeight: 300,
+      ),
+      child: Container(
+
+
+        alignment: Alignment.centerLeft,
+        child: Row(
+          children: [
+            Expanded(
+              child: FutureBuilder<List<dynamic>>(
+                  future: fetchUsers(),
+                  builder: (BuildContext context, AsyncSnapshot snapshot) {
+                    if (snapshot.hasData) {
+                      print(_age(snapshot.data[0]));
+                      return Container(
+                        child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+
+                            itemCount: 3,
+                            itemBuilder: (BuildContext context, int index) {
+                              return Container(
+
+                                margin: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                                child: Card(
+                                  child: InkWell(
+                                    splashColor: Colors.blue.withAlpha(30),
+                                    onTap: () {
+                                      Navigator.pushNamed(context, '/detail');
+                                    },
+                                    child: Container(
+
+                                      width:
+                                      MediaQuery.of(context).size.width *
+                                          0.4,
+                                      child: Column(
+
+                                          crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                          children: [
+                                      Stack(
+                                      children: [
+
+                                    Center(
+                                      child: FadeInImage.assetNetwork(
+                                        placeholder: 'asset/gif/loading.gif',
+                                        image: snapshot.data[index]['avatar'],
+                                        fit: BoxFit.fill,
+                                      ),
+                                    ),
+                                    ],
+                                  ),
+
+                                            // Image.network(
+                                            //   snapshot.data[index]['avatar'],
+                                            //   fit: BoxFit.fill,
+                                            //
+                                            // ),
+                                            SizedBox(
+                                              height: 10,
+                                            ),
+                                            Container(
+                                              margin: EdgeInsets.fromLTRB(8,8,8,0),
+                                              child: Column(
+                                                crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                                children: [
+
+                                                  Row(
+                                                  children: [
+                                                    Text(
+                                                      'ວຽງຈັນ',
+                                                      style: TextStyle(
+                                                          color:
+                                                          Colors.grey),
+                                                    ),
+                                                    Spacer(),
+                                                    Text(
+                                                      '3ມື້',
+                                                      style: TextStyle(
+                                                          color: Colors
+                                                              .redAccent),
+                                                    ),
+                                                  ],
+                                                  ),
+                                                  SizedBox(
+                                                  height: 20,
+                                                  ),
+                                                  Text(_name(
+                                                    snapshot.data[index])+"ພຣະມະຫາສົມເດັດພຣະມະຫາສົມເດັດພຣະມະຫາສົມເດັດ",
+                                                    maxLines: 3,
+                                                    overflow: TextOverflow.ellipsis,),
+                                                  SizedBox(
+                                                  height: 20,
+                                                  ),
+                                                  Text(_age(
+                                                      snapshot.data[index])),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+
+                                          ]),
+                                    ),
+                                  ),
+                                ),
+                              );
+                            }),
+                      );
+                    } else {
+                      return Center(child: CircularProgressIndicator());
+                    }
+                  }),
+            ),
+          ],
+        ),
+      ),
+    );
+  }

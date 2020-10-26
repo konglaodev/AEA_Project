@@ -9,13 +9,22 @@ class Subandgame extends StatefulWidget {
 
 class _SubandgameState extends State<Subandgame> {
   Widget title() {
-    return Text(
-      'ບົດຮຽນ ແລະ ເກມ',
-      style: TextStyle(
-          decoration: TextDecoration.none,
-          color: Colors.white,
-          fontSize: 50.0,
-          fontWeight: FontWeight.bold),
+    return Container(
+      width: 500,
+      color: Colors.orange.shade400,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'ບົດຮຽນ ແລະ ເກມ',
+            style: TextStyle(
+                decoration: TextDecoration.none,
+                color: Colors.white,
+                fontSize: 50.0,
+                fontWeight: FontWeight.bold),
+          ),
+        ],
+      ),
     );
   }
 
@@ -27,8 +36,8 @@ class _SubandgameState extends State<Subandgame> {
         },
         child: Image.asset(
           'images/bothien.png',
-          width: 200.0,
-          height: 200.0,
+          width: 180.0,
+          height: 110.0,
         ),
       ),
     );
@@ -43,7 +52,7 @@ class _SubandgameState extends State<Subandgame> {
           child: Image.asset(
             "images/iconbtgame.png",
             width: 200.0,
-            height: 200.0,
+            height: 110.0,
           )),
     );
   }
@@ -52,7 +61,7 @@ class _SubandgameState extends State<Subandgame> {
     return Container(
       child: FlatButton(
         onPressed: () {
-          Navigator.pushNamed(context, '/subjectGame');
+          Navigator.pop(context);
         },
         child: Image.asset(
           "images/backbt.png",

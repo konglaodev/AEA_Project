@@ -1,0 +1,479 @@
+
+import 'dart:convert';
+
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+
+class BottomSearch extends StatefulWidget{
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return _BottomSearchState();
+  }
+
+}
+
+class _BottomSearchState extends State<BottomSearch> with AutomaticKeepAliveClientMixin{
+
+  final String apiUrl = "https://reqres.in/api/users?page=2";
+
+  Future<List<dynamic>> fetchUsers() async {
+    var result = await http.get(apiUrl);
+    return json.decode(result.body)['data'];
+  }
+
+  String _name(dynamic user) {
+    return
+      user['first_name'];
+  }
+
+  String _location(dynamic user) {
+    return user['location']['country'];
+  }
+
+  String _age(Map<dynamic, dynamic> user) {
+    return "Age: " + user['last_name'].toString();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+  super.build(context);
+
+
+
+    return Scaffold(
+       body:
+       Container(
+         margin: EdgeInsets.fromLTRB(15, 0, 0, 0),
+         child: SingleChildScrollView(
+           child: Column(
+             children: [
+               Container(
+                 alignment: Alignment.centerLeft,
+                 child: Text(
+                   'ສະບາຍດີ !',
+                   textAlign: TextAlign.left,
+                   style: TextStyle(
+                       fontSize: 30,
+                       color: Color.fromARGB(255, 184, 133, 13),
+                       fontWeight: FontWeight.bold),
+                 ),
+               ),
+               Container(
+                 margin: EdgeInsets.fromLTRB(0, 0, 15, 20),
+                 padding: EdgeInsets.symmetric(horizontal: 25, vertical: 1),
+                 decoration: BoxDecoration(
+                   borderRadius: BorderRadius.circular(10),
+                   //border: Border.all(),
+
+                   color: Color.fromARGB(255, 253, 243, 243),
+                 ),
+                 child: TextField(
+                   decoration: InputDecoration(
+                     border: InputBorder.none,
+                     icon: Icon(Icons.search),
+                     hintText: "ຊອກຫາເຄື່ອງທັງໝົດ",
+                     hintStyle: TextStyle(color: Colors.grey),
+                     isDense: true,
+                     // Added this
+                     contentPadding: EdgeInsets.all(8),
+                   ),
+                 ),
+               ),
+               Container(
+                 alignment: Alignment.centerLeft,
+                 child: SingleChildScrollView(
+                   scrollDirection: Axis.horizontal,
+                   child: Row(
+                     children: [
+                       Container(
+                         margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
+                         child: InkWell(
+                           onTap: () {
+                             Navigator.pushNamed(context, '/listitem');
+                           },
+                           child: Column(
+                             children: [
+                               Container(
+                                   padding: EdgeInsets.all(32),
+                                   decoration: new BoxDecoration(
+                                       shape: BoxShape.circle,
+                                       image: new DecorationImage(
+                                           fit: BoxFit.fill,
+                                           image: new AssetImage(
+                                               "asset/images/phacat.png")))),
+                               Text('ພຣະ')
+                             ],
+                           ),
+                         ),
+                       ),
+                     ],
+                   ),
+                 ),
+               ),
+               Divider(
+                 color: Colors.grey,
+               ),
+               Row(
+                 children: [
+                   Text(
+                     "ໂປໂມຊັ້ນພິເສດ",
+                     style: TextStyle(fontSize: 25),
+                   ),
+                   Spacer(),
+                   FlatButton(
+                       onPressed: () {
+                         Navigator.pushNamed(context, "/showallitem");
+                       },
+                       shape: RoundedRectangleBorder(
+                         borderRadius: BorderRadius.circular(20),
+                       ),
+                       child: Row(
+                         children: [
+                           Text(
+                             "ເບິ່ງທັງໝົດ ",
+                             style: TextStyle(
+                               color: Color.fromARGB(255, 184, 133, 13),
+                               fontSize: 13,
+                             ),
+                           ),
+                           Icon(Icons.arrow_forward_ios,
+                               size: 13,
+                               color: Color.fromARGB(255, 184, 133, 13)),
+                         ],
+                       ))
+                 ],
+               ),
+
+               ItemCard(),
+
+               //1111111111111111111111111111
+               Row(
+                 children: [
+                   Text(
+                     "ລາຍການຍອດນິຍົມ",
+                     style: TextStyle(fontSize: 25),
+                   ),
+                   Spacer(),
+                   FlatButton(
+                       onPressed: () {},
+                       shape: RoundedRectangleBorder(
+                         borderRadius: BorderRadius.circular(20),
+                       ),
+                       child: Row(
+                         children: [
+                           Text(
+                             "ເບິ່ງທັງໝົດ ",
+                             style: TextStyle(
+                               color: Color.fromARGB(255, 184, 133, 13),
+                               fontSize: 13,
+                             ),
+                           ),
+                           Icon(Icons.arrow_forward_ios,
+                               size: 13,
+                               color: Color.fromARGB(255, 184, 133, 13)),
+                         ],
+                       ))
+                 ],
+               ),
+               Container(
+                 alignment: Alignment.centerLeft,
+                 child: SingleChildScrollView(
+                   scrollDirection: Axis.horizontal,
+                   child: Row(
+                     children: [
+                       Container(
+                         margin: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                         child: Card(
+                           child: InkWell(
+                             splashColor: Colors.blue.withAlpha(30),
+                             onTap: () {
+                               Navigator.pushNamed(context, '/detail');
+                             },
+                             child: Container(
+                               width: MediaQuery.of(context).size.width * 0.4,
+                               child: Column(
+                                   crossAxisAlignment:
+                                   CrossAxisAlignment.start,
+                                   children: [
+                                     Image.asset(
+                                       "asset/images/phashow.png",
+                                       fit: BoxFit.fill,
+                                     ),
+                                     SizedBox(
+                                       height: 10,
+                                     ),
+                                     Container(
+                                       margin: EdgeInsets.all(8),
+                                       child: Column(
+                                         crossAxisAlignment:
+                                         CrossAxisAlignment.start,
+                                         children: [
+                                           Row(
+                                             children: [
+                                               Text(
+                                                 'ວຽງຈັນ',
+                                                 style: TextStyle(
+                                                     color: Colors.grey),
+                                               ),
+                                               Spacer(),
+                                               Text(
+                                                 '3ມື້',
+                                                 style: TextStyle(
+                                                     color: Colors.redAccent),
+                                               ),
+                                             ],
+                                           ),
+                                           SizedBox(
+                                             height: 20,
+                                           ),
+                                           Text('ພະສົມເດັດມະຫາເສດຖີ ລຸ້ນ 9'),
+                                           SizedBox(
+                                             height: 20,
+                                           ),
+                                           Text('250,000 Kip'),
+                                           SizedBox(
+                                             height: 10,
+                                           ),
+                                         ],
+                                       ),
+                                     ),
+                                   ]),
+                             ),
+                           ),
+                         ),
+                       ),
+                     ],
+                   ),
+                 ),
+               ),
+               //22222222222222222222222222222222222
+
+               Row(
+                 children: [
+                   Text(
+                     "ໃກ້ໝົດເວລາປະມູນ",
+                     style: TextStyle(fontSize: 25),
+                   ),
+                   Spacer(),
+                   FlatButton(
+                       onPressed: () {},
+                       shape: RoundedRectangleBorder(
+                         borderRadius: BorderRadius.circular(20),
+                       ),
+                       child: Row(children: [
+                         Text(
+                           "ເບິ່ງທັງໝົດ ",
+                           style: TextStyle(color: Color.fromARGB(255, 184, 133, 13),fontSize: 13,),
+                         ),
+                         Icon(Icons.arrow_forward_ios,size: 13,color: Color.fromARGB(255, 184, 133, 13)),
+                       ],)
+                   )
+                 ],
+               ),
+               Container(
+                 alignment: Alignment.centerLeft,
+                 child: SingleChildScrollView(
+                   scrollDirection: Axis.horizontal,
+                   child: Row(
+                     children: [
+
+                       Container(
+
+                         margin: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                         child:Card(
+                           child: InkWell(
+                             splashColor: Colors.blue.withAlpha(30),
+                             onTap: () {
+                               Navigator.pushNamed(context, '/detail');
+                             },
+                             child: Container(
+
+                               width: MediaQuery.of(context).size.width * 0.4,
+                               child: Column(
+                                   crossAxisAlignment: CrossAxisAlignment.start,
+                                   children: [
+
+
+                                     Image.asset(
+                                       "asset/images/phashow.png",
+                                       fit: BoxFit.fill,
+                                     ),
+                                     SizedBox(height: 10,),
+
+                                     Container(
+                                       margin: EdgeInsets.all(8),
+                                       child: Column(
+                                         crossAxisAlignment: CrossAxisAlignment.start,
+                                         children: [
+                                           Row(
+
+                                             children: [
+                                               Text(
+                                                 'ວຽງຈັນ',
+                                                 style: TextStyle(color: Colors.grey),
+                                               ),
+                                               Spacer(),
+                                               Text('3ມື້',style: TextStyle(color: Colors.redAccent),),
+                                             ],
+                                           ),
+                                           SizedBox(height: 20,),
+                                           Text('ພະສົມເດັດມະຫາເສດຖີ ລຸ້ນ 9'),
+                                           SizedBox(height: 20,),
+                                           Text('250,000 Kip'),
+                                           SizedBox(height: 10,),
+                                         ],
+                                       ),
+                                     ),
+
+                                   ]),
+                             ),
+                           ),
+                         ),),
+
+                     ],
+                   ),
+                   //333333333333333333333333333333333
+
+                 ),
+               ),
+
+             ],
+           ),
+         ),
+       ),
+    );
+  }
+
+
+
+  Widget ItemCard() {
+    return ConstrainedBox(
+      constraints: const BoxConstraints(
+        maxHeight: 300,
+      ),
+      child: Container(
+
+
+        alignment: Alignment.centerLeft,
+        child: Row(
+          children: [
+            Expanded(
+              child: FutureBuilder<List<dynamic>>(
+                  future: fetchUsers(),
+                  builder: (BuildContext context, AsyncSnapshot snapshot) {
+                    if (snapshot.hasData) {
+                      print(_age(snapshot.data[0]));
+                      return Container(
+                        child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+
+                            itemCount: 3,
+                            itemBuilder: (BuildContext context, int index) {
+                              return Container(
+
+                                margin: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                                child: Card(
+                                  child: InkWell(
+                                    splashColor: Colors.blue.withAlpha(30),
+                                    onTap: () {
+                                      Navigator.pushNamed(context, '/detail');
+                                    },
+                                    child: Container(
+
+                                      width:
+                                      MediaQuery.of(context).size.width *
+                                          0.4,
+                                      child: Column(
+
+                                          crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                          children: [
+                                      Stack(
+                                      children: [
+
+                                    Center(
+                                      child: FadeInImage.assetNetwork(
+                                        placeholder: 'asset/gif/loading.gif',
+                                        image: snapshot.data[index]['avatar'],
+                                        fit: BoxFit.fill,
+                                      ),
+                                    ),
+                                    ],
+                                  ),
+
+                                            // Image.network(
+                                            //   snapshot.data[index]['avatar'],
+                                            //   fit: BoxFit.fill,
+                                            //
+                                            // ),
+                                            SizedBox(
+                                              height: 10,
+                                            ),
+                                            Container(
+                                              margin: EdgeInsets.fromLTRB(8,8,8,0),
+                                              child: Column(
+                                                crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                                children: [
+
+                                                  Row(
+                                                  children: [
+                                                    Text(
+                                                      'ວຽງຈັນ',
+                                                      style: TextStyle(
+                                                          color:
+                                                          Colors.grey),
+                                                    ),
+                                                    Spacer(),
+                                                    Text(
+                                                      '3ມື້',
+                                                      style: TextStyle(
+                                                          color: Colors
+                                                              .redAccent),
+                                                    ),
+                                                  ],
+                                                  ),
+                                                  SizedBox(
+                                                  height: 20,
+                                                  ),
+                                                  Text(_name(
+                                                    snapshot.data[index])+"ພຣະມະຫາສົມເດັດພຣະມະຫາສົມເດັດພຣະມະຫາສົມເດັດ",
+                                                    maxLines: 3,
+                                                    overflow: TextOverflow.ellipsis,),
+                                                  SizedBox(
+                                                  height: 20,
+                                                  ),
+                                                  Text(_age(
+                                                      snapshot.data[index])),
+                                                  SizedBox(
+                                                    height: 10,
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+
+                                          ]),
+                                    ),
+                                  ),
+                                ),
+                              );
+                            }),
+                      );
+                    } else {
+                      return Center(child: CircularProgressIndicator());
+                    }
+                  }),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
+}
