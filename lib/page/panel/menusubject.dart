@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:primaryschool/page/panel/SubjectGame.dart';
-import 'package:primaryschool/page/panel/firstpage.dart';
 
 class Menusub extends StatefulWidget {
   Menusub({Key key}) : super(key: key);
@@ -25,7 +24,7 @@ class _MenusubState extends State<Menusub> {
   Widget next() {
     return FlatButton(
       onPressed: () {
-        Navigator.pushNamed(context, '/menusub2');
+        Navigator.pushReplacementNamed(context, '/menusub2');
       },
       child: Image.asset(
         "images/btnext.png",
@@ -37,13 +36,11 @@ class _MenusubState extends State<Menusub> {
   Widget homebtn() {
     return FlatButton(
       onPressed: () {
-        // Navigator.pushAndRemoveUntil(
-        //   context,
-        //   MaterialPageRoute(builder: (BuildContext context) => SubjectGame()),
-        //   ModalRoute.withName('/subjectGame'),
-        // );
-        Navigator.pushNamedAndRemoveUntil(
-            context, '/subjectGame', ModalRoute.withName('/b'));
+        Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (BuildContext context) => SubjectGame()),
+          ModalRoute.withName('/subjectGame'),
+        );
       },
       child: Image.asset(
         "images/homepage.png",
@@ -62,9 +59,6 @@ class _MenusubState extends State<Menusub> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            SizedBox(
-              height: 50.0,
-            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -195,13 +189,12 @@ class _MenusubState extends State<Menusub> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
-                back(),
+                SizedBox(
+                  width: 100,
+                ),
                 homebtn(),
                 next(),
               ],
-            ),
-            SizedBox(
-              height: 10.0,
             ),
           ],
         ),

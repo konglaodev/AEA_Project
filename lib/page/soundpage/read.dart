@@ -65,7 +65,15 @@ class _ReadSoundState extends State<ReadSound> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        shadowColor: Colors.black,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.black,
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         title: Text(
           'ບົດເລື່ອງ',
           style: TextStyle(
@@ -74,7 +82,7 @@ class _ReadSoundState extends State<ReadSound> {
               color: Color.fromARGB(255, 184, 133, 13),
               fontWeight: FontWeight.bold),
         ),
-        backgroundColor: Colors.white10,
+        backgroundColor: Colors.white,
       ),
       body: Container(
         child: SafeArea(

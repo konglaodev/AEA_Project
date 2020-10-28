@@ -11,20 +11,10 @@ class _Menusub7State extends State<Menusub7> {
   Widget back() {
     return FlatButton(
       onPressed: () {
-        Navigator.pop(context);
+        Navigator.pushReplacementNamed(context, '/menusub6');
       },
       child: Image.asset(
         "images/backbt.png",
-        width: 40.0,
-      ),
-    );
-  }
-
-  Widget next() {
-    return FlatButton(
-      onPressed: () {},
-      child: Image.asset(
-        "images/btnext.png",
         width: 40.0,
       ),
     );
@@ -124,7 +114,9 @@ class _Menusub7State extends State<Menusub7> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 back(),
-                next(),
+                SizedBox(
+                  width: 100,
+                )
               ],
             ),
             SizedBox(

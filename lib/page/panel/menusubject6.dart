@@ -11,7 +11,7 @@ class _Menusub6State extends State<Menusub6> {
   Widget back() {
     return FlatButton(
       onPressed: () {
-        Navigator.pop(context);
+        Navigator.pushReplacementNamed(context, '/menusub5');
       },
       child: Image.asset(
         "images/backbt.png",
