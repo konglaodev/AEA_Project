@@ -43,7 +43,11 @@ class _FlipCardGaneState extends State<FlipCardGane> {
           ],
           borderRadius: BorderRadius.circular(10)),
       margin: EdgeInsets.all(4.0),
-      child: Image.asset(_data[index]),
+      child: Image.asset(
+        _data[index],
+        width: 100.0,
+        height: 100.0,
+      ),
     );
   }
 
@@ -90,6 +94,7 @@ class _FlipCardGaneState extends State<FlipCardGane> {
   Widget build(BuildContext context) {
     return _isFinished
         ? Scaffold(
+            backgroundColor: Colors.green[100],
             body: Center(
               child: GestureDetector(
                 onTap: () {
@@ -118,116 +123,125 @@ class _FlipCardGaneState extends State<FlipCardGane> {
           )
         : Scaffold(
             body: SafeArea(
-              child: SingleChildScrollView(
-                child: Column(
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: _time > 0
-                          ? Text(
-                              '$_time',
-                              style: Theme.of(context).textTheme.headline3,
-                            )
-                          : Text(
-                              'Left:$_left',
-                              style: Theme.of(context).textTheme.headline3,
-                            ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: GridView.builder(
-                        shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 3,
-                        ),
-                        itemBuilder: (context, index) => _start
-                            ? FlipCard(
-                                key: _cardStateKeys[index],
-                                onFlip: () {
-                                  if (!_flip) {
-                                    _flip = true;
-                                    _previousIndex = index;
-                                  } else {
-                                    _flip = false;
-                                    if (_previousIndex != index) {
-                                      if (_data[_previousIndex] !=
-                                          _data[index]) {
-                                        _wait = true;
-
-                                        Future.delayed(
-                                            const Duration(milliseconds: 1500),
-                                            () {
-                                          _cardStateKeys[_previousIndex]
-                                              .currentState
-                                              .toggleCard();
-                                          _previousIndex = index;
-                                          _cardStateKeys[_previousIndex]
-                                              .currentState
-                                              .toggleCard();
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: _time > 0
+                        ? Text(
+                            '$_time',
+                            style: Theme.of(context).textTheme.headline3,
+                          )
+                        : Text(
+                            'ຍັງເຫຼືອ:$_leftຄູ່',
+                            style: Theme.of(context).textTheme.headline3,
+                          ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        width: 800,
+                        child: GridView.builder(
+                          shrinkWrap: true,
+                          physics: NeverScrollableScrollPhysics(),
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 6,
+                          ),
+                          itemBuilder: (context, index) => _start
+                              ? FlipCard(
+                                  key: _cardStateKeys[index],
+                                  onFlip: () {
+                                    if (!_flip) {
+                                      _flip = true;
+                                      _previousIndex = index;
+                                    } else {
+                                      _flip = false;
+                                      if (_previousIndex != index) {
+                                        if (_data[_previousIndex] !=
+                                            _data[index]) {
+                                          _wait = true;
 
                                           Future.delayed(
-                                              const Duration(milliseconds: 160),
-                                              () {
-                                            setState(() {
-                                              _wait = false;
-                                            });
-                                          });
-                                        });
-                                      } else {
-                                        _cardFlips[_previousIndex] = false;
-                                        _cardFlips[index] = false;
-                                        print(_cardFlips);
+                                              const Duration(
+                                                  milliseconds: 1500), () {
+                                            _cardStateKeys[_previousIndex]
+                                                .currentState
+                                                .toggleCard();
+                                            _previousIndex = index;
+                                            _cardStateKeys[_previousIndex]
+                                                .currentState
+                                                .toggleCard();
 
-                                        setState(() {
-                                          _left -= 1;
-                                        });
-                                        if (_cardFlips
-                                            .every((t) => t == false)) {
-                                          print("Won");
-                                          Future.delayed(
-                                              const Duration(milliseconds: 160),
-                                              () {
-                                            setState(() {
-                                              _isFinished = true;
-                                              _start = false;
+                                            Future.delayed(
+                                                const Duration(
+                                                    milliseconds: 160), () {
+                                              setState(() {
+                                                _wait = false;
+                                              });
                                             });
                                           });
+                                        } else {
+                                          _cardFlips[_previousIndex] = false;
+                                          _cardFlips[index] = false;
+                                          print(_cardFlips);
+
+                                          setState(() {
+                                            _left -= 1;
+                                          });
+                                          if (_cardFlips
+                                              .every((t) => t == false)) {
+                                            print("Won");
+                                            Future.delayed(
+                                                const Duration(
+                                                    milliseconds: 160), () {
+                                              setState(() {
+                                                _isFinished = true;
+                                                _start = false;
+                                              });
+                                            });
+                                          }
                                         }
                                       }
                                     }
-                                  }
-                                  setState(() {});
-                                },
-                                flipOnTouch: _wait ? false : _cardFlips[index],
-                                direction: FlipDirection.HORIZONTAL,
-                                front: Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.grey,
-                                      borderRadius: BorderRadius.circular(5),
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color: Colors.black45,
-                                          blurRadius: 3,
-                                          spreadRadius: 0.8,
-                                          offset: Offset(2.0, 1),
-                                        )
-                                      ]),
-                                  margin: EdgeInsets.all(4.0),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Image.asset(
-                                      "assets/animalspics/quest.png",
+                                    setState(() {});
+                                  },
+                                  flipOnTouch:
+                                      _wait ? false : _cardFlips[index],
+                                  direction: FlipDirection.HORIZONTAL,
+                                  front: Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.grey,
+                                        borderRadius: BorderRadius.circular(5),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.black45,
+                                            blurRadius: 3,
+                                            spreadRadius: 0.8,
+                                            offset: Offset(2.0, 1),
+                                          )
+                                        ]),
+                                    margin: EdgeInsets.all(4.0),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Image.asset(
+                                        "assets/animalspics/quest.png",
+                                      ),
                                     ),
                                   ),
-                                ),
-                                back: getItem(index))
-                            : getItem(index),
-                        itemCount: _data.length,
+                                  back: getItem(index))
+                              : getItem(index),
+                          itemCount: _data.length,
+                        ),
                       ),
-                    ),
-                  ],
-                ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 50,
+                  )
+                ],
               ),
             ),
           );

@@ -31,7 +31,7 @@ class _GameltwoState extends State<Gameltwo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green[50],
+      backgroundColor: Colors.green[100],
       appBar: AppBar(title: Text('ກະລຸນາເລືອກຄວາມຍາກ') ,),
       body: Padding(
         padding: const EdgeInsets.all(8.0),

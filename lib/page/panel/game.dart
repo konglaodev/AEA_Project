@@ -76,7 +76,9 @@ class _GameState extends State<Game> {
   Widget g4btn() {
     return Container(
       child: FlatButton(
-          onPressed: null,
+          onPressed: () {
+            Navigator.pushNamed(context,  '/imgprotitle');
+          },
           child: Image.asset(
             "images/secondgbtn.png",
             width: 300.0,

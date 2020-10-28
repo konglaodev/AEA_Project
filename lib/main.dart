@@ -2,7 +2,16 @@ import 'package:primaryschool/page/panel/firstpage.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:primaryschool/page/panel/SubjectGame.dart';
+import 'package:primaryschool/page/panel/game/dragame.dart';
+import 'package:primaryschool/page/panel/game/dragametitle.dart';
+import 'package:primaryschool/page/panel/game/draganimal.dart';
+import 'package:primaryschool/page/panel/game/dragcar.dart';
+import 'package:primaryschool/page/panel/game/dragplant.dart';
+import 'package:primaryschool/page/panel/game/dragselect.dart';
 import 'package:primaryschool/page/panel/game/game2.dart';
+import 'package:primaryschool/page/panel/game/imagepro.dart';
+import 'package:primaryschool/page/panel/game/imageprohome.dart';
+import 'package:primaryschool/page/panel/game/imagequiz.dart';
 import 'package:primaryschool/page/panel/game/random.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson6.dart';
 import 'component/Playaudio.dart';
@@ -150,17 +159,15 @@ class MyApp extends StatelessWidget {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.landscapeLeft,
       DeviceOrientation.landscapeRight,
-    ]); //set landscape app
+    ]);
 
     return MaterialApp(
-      theme: ThemeData(fontFamily: 'lao'), //setfont app
+      theme: ThemeData(fontFamily: 'lao'),
       debugShowCheckedModeBanner: false,
       home: HomePage(),
       routes: {
-        //panel
         '/subjectGame': (context) => SubjectGame(),
         '/subandjectGame': (context) => Subandgame(),
-        //audiobook page
         '/Audiobook': (context) => Playaudio(),
         '/lession1': (context) => Lession1(),
         '/lesson2': (context) => Lession2(),
@@ -220,7 +227,6 @@ class MyApp extends StatelessWidget {
 
         '/lesson64': (context) => Lesson64(),
         '/lesson66': (context) => Lesson66(),
-        //menu bothien
         '/menusub': (context) => Menusub(),
         '/menusub2': (context) => Menusub2(),
         '/menusub3': (context) => Menusub3(),
@@ -228,7 +234,6 @@ class MyApp extends StatelessWidget {
         '/menusub5': (context) => Menusub5(),
         '/menusub6': (context) => Menusub6(),
         '/menusub7': (context) => Menusub7(),
-        //bothien
         '/bot1': (context) => Bot1(),
         '/bot2': (context) => Bot2(),
         '/bot3': (context) => Bot3(),
@@ -299,9 +304,20 @@ class MyApp extends StatelessWidget {
         '/game': (context) => Game(), //nar game
         '/gamebt': (context) => Gamebt(), //nar game bod thrng
         '/gamefirstlesson': (context) => Gamelessonone(),
+        '/dragame': (context) => Draggame(), //dragame1
+        '/dragcar': (context) => Dragcar(), //dragcar
+        '/draganimal': (context) => Draganimal(), //draganimal
+        '/dragplant': (context) => Dragplant(), //draganimal
+        '/dragametitle': (context) => Dragametitle(), //dragametitle
+        '/dragameselect': (context) => Dragselect(), //dragametitleselect
         '/Home': (context) => HomePage(),
         '/randombt': (context) => Randomimg(),
         '/randomtwo': (context) => Gametwo(),
+
+        //img pro
+        '/imgpro': (context) => Imagepro(),
+        '/imgprotitle': (context) => Imgprotitle(),
+        '/imgquiz': (context) => Imagequiz(),
       },
     );
   }
