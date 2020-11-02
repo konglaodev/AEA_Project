@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
- 
-import 'package:primaryschool/page/panel/game/imagepro.dart';
+import 'package:primaryschool/page/panel/game.dart';
+import 'package:primaryschool/page/panel/game/imagequiz.dart';
  
 // ignore: must_be_immutable
 class Result extends StatelessWidget {
@@ -26,7 +26,7 @@ class Result extends StatelessWidget {
               child: Container(
                 padding: EdgeInsets.symmetric(),
                 child: Text(
-                  'Your Score is $score of ${(10 * totalQue)}', //each ques carries 10 mrks
+                  'ຄະແນນທັງໝົດແມ່ນ $score ໃນ ${(10 * totalQue)}', //each ques carries 10 mrks
                   style: TextStyle(
                     color: Colors.limeAccent,
                     fontSize: 26.0,
@@ -40,7 +40,7 @@ class Result extends StatelessWidget {
             ),
             Container(
                 child: Text(
-              'Attempted : $attempted', //no of attempted ques
+              'ຕອບທັງໝົດ : $attempted ຂໍ້' , //no of attempted ques
               style: TextStyle(
                 color: Colors.greenAccent,
                 fontSize: 20.0,
@@ -52,7 +52,7 @@ class Result extends StatelessWidget {
             ),
             Container(
                 child: Text(
-              'Not Attempted : $notAttempted', // no of unattempted ques
+              'ຂໍ້ທີ່ບໍ່ຕອບ : $notAttempted ຂໍ້', // no of unattempted ques
               style: TextStyle(
                 color: Colors.greenAccent,
                 fontSize: 20.0,
@@ -64,7 +64,7 @@ class Result extends StatelessWidget {
             ),
             Container(
                 child: Text(
-              'Correct : $correct', //correct ques
+              'ຈຳນວນຂໍ້ທີ່ຕອບຖືກ : $correct ຂໍ້', //correct ques
               style: TextStyle(
                 color: Colors.greenAccent,
                 fontSize: 20.0,
@@ -76,7 +76,7 @@ class Result extends StatelessWidget {
             ),
             Container(
                 child: Text(
-              'Incorrect : ${totalQue - correct - notAttempted}', // cal of  incorrect ques
+              'ຕອບຜິດ : ${totalQue - correct - notAttempted} ຂໍ້', // cal of  incorrect ques
               style: TextStyle(
                 fontSize: 20.0,
                 color: Colors.greenAccent,
@@ -91,7 +91,7 @@ class Result extends StatelessWidget {
                 Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Imagepro(),
+                      builder: (context) => Imagequiz(),
                     ));
               },
               child: Container(
@@ -101,7 +101,7 @@ class Result extends StatelessWidget {
                   borderRadius: BorderRadius.circular(40.0),
                 ),
                 child: Text(
-                  'Attempt Quiz Again',
+                  'ຫຼິ້ນອີກຄັ້ງ',
 
                   ///if we want to attempt again
                   style: TextStyle(
@@ -119,7 +119,7 @@ class Result extends StatelessWidget {
                 Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Imagepro(),
+                      builder: (context) => Game(),
                     ));
               },
               child: Container(
@@ -130,7 +130,7 @@ class Result extends StatelessWidget {
                   borderRadius: BorderRadius.circular(40.0),
                 ),
                 child: Text(
-                  'Go to Home',
+                  'ກັບສ่ູໜ້າເລືອກເກມ',
                   style: TextStyle(
                     color: Colors.brown[50],
                     fontSize: 18.0,

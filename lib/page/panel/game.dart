@@ -9,13 +9,16 @@ class Game extends StatefulWidget {
 
 class _GameState extends State<Game> {
   Widget gametitle() {
-    return Text(
-      "ກະລຸນາເລືອກເກມ",
-      style: TextStyle(
-          decoration: TextDecoration.none,
-          fontSize: 50.0,
-          color: Colors.white,
-          fontWeight: FontWeight.bold),
+    return Container(
+      color: Colors.greenAccent,
+      child: Text(
+        "ກະລຸນາເລືອກເກມ",
+        style: TextStyle(
+            decoration: TextDecoration.none,
+            fontSize: 50.0,
+            color: Colors.white,
+            fontWeight: FontWeight.bold),
+      ),
     );
   }
 
@@ -64,7 +67,9 @@ class _GameState extends State<Game> {
   Widget g3btn() {
     return Container(
       child: FlatButton(
-          onPressed: null,
+          onPressed: () {
+                        Navigator.pushNamed(context, '/bodthrngls2');
+                      },
           child: Image.asset(
             "images/firstgbtn.png",
             width: 300.0,
@@ -77,7 +82,7 @@ class _GameState extends State<Game> {
     return Container(
       child: FlatButton(
           onPressed: () {
-            Navigator.pushNamed(context,  '/imgprotitle');
+            Navigator.pushNamed(context, '/imgprotitle');
           },
           child: Image.asset(
             "images/secondgbtn.png",
@@ -98,10 +103,15 @@ class _GameState extends State<Game> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Row(
-              children: [back()],
+            Column(
+              children: [
+                Row(
+                  children: [back()],
+                ),
+                gametitle(),
+              ],
             ),
-            gametitle(),
+            
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [g1btn(), g2btn()],

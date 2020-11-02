@@ -8,19 +8,22 @@ class Gamebt extends StatefulWidget {
 }
 
 class _GamebtState extends State<Gamebt> {
-
-  Widget startgame(){
+  Widget startgame() {
     return Container(
       child: FlatButton(
         onPressed: () {
-          Navigator.pushNamed(context,'/gamefirstlesson');
+          Navigator.pushNamed(context, '/gamefirstlesson');
         },
-        child: Image.asset('images/start.png',width: 350.0,
-            height: 200.0,),
+        child: Image.asset(
+          'images/start.png',
+          width: 350.0,
+          height: 200.0,
+        ),
       ),
     );
   }
-Widget back() {
+
+  Widget back() {
     return Container(
       child: FlatButton(
         onPressed: () {
@@ -34,15 +37,17 @@ Widget back() {
     );
   }
 
-
-   Widget hintgame(){
+  Widget hintgame() {
     return Container(
       child: FlatButton(
         onPressed: () {
-          Navigator.pushNamed(context,'/firstbodhn');
+          Navigator.pushNamed(context, '/firstbodhn');
         },
-        child: Image.asset('images/hint.png',width: 350.0,
-            height: 200.0,),
+        child: Image.asset(
+          'images/hint.png',
+          width: 350.0,
+          height: 200.0,
+        ),
       ),
     );
   }
@@ -52,7 +57,8 @@ Widget back() {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("images/NarinterfacegameBG.jpg"), fit: BoxFit.cover)),
+              image: AssetImage("images/NarinterfacegameBG.jpg"),
+              fit: BoxFit.cover)),
       child: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -65,7 +71,7 @@ Widget back() {
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [startgame(),hintgame()],
+              children: [startgame(), hintgame()],
             ),
             SizedBox(
               height: 20.0,

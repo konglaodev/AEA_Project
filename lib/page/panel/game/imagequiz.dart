@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-
 import 'package:primaryschool/data.dart';
 import 'package:primaryschool/result.dart';
 import 'package:primaryschool/questions.dart';
@@ -41,7 +40,7 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
     totalQue = _questions.length;
 
     animationController = AnimationController(
-        duration: const Duration(seconds: 150), vsync: this);
+        duration: const Duration(seconds: 1000), vsync: this);
 
     animation =
         Tween(begin: animBegin, end: animEnd).animate(animationController)
@@ -100,50 +99,53 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
+      backgroundColor: Colors.green[200],
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 60),
         child: Column(
           children: <Widget>[
             Container(
               padding: EdgeInsets.fromLTRB(12.0, 0.0, 12.0, 0.0),
-              child: Row(
-                children: <Widget>[
-                  Text(
-                    "Question ",
-                    style: TextStyle(
-                        color: Colors.redAccent,
-                        fontSize: 18.0,
-                        fontWeight: FontWeight.bold),
+              child: Column(
+                children: [
+                  Row(
+                    children: <Widget>[
+                      Text(
+                        "ຄຳຖາມທີ ",
+                        style: TextStyle(
+                            color: Colors.redAccent,
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "${index + 1} ໃນ ${_questions.length}",
+                        style: TextStyle(
+                          color: Colors.redAccent,
+                          fontSize: 24.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Spacer(),
+                      Text(
+                        "$score ",
+                        style: TextStyle(
+                          color: Colors.redAccent,
+                          fontSize: 24.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        "ຄະແນນ",
+                        style: TextStyle(
+                          color: Colors.redAccent,
+                          fontSize: 18.0,
+                        ),
+                      )
+                    ],
                   ),
-                  Text(
-                    "${index + 1} of ${_questions.length}",
-                    style: TextStyle(
-                      color: Colors.redAccent,
-                      fontSize: 24.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Spacer(),
-                  Text(
-                    "$score ",
-                    style: TextStyle(
-                      color: Colors.redAccent,
-                      fontSize: 24.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text(
-                    "points",
-                    style: TextStyle(
-                      color: Colors.redAccent,
-                      fontSize: 18.0,
-                    ),
-                  )
                 ],
               ),
             ),
-            SizedBox(height: 30.0),
             Container(
               padding: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
               child: Text(
@@ -153,9 +155,6 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                     fontSize: 18.0,
                     fontWeight: FontWeight.bold),
               ),
-            ),
-            SizedBox(
-              height: 20,
             ),
             Container(
                 child: LinearProgressIndicator(
@@ -168,7 +167,7 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                     image: AssetImage(
                       '${_questions[index].getImage()}',
                     ),
-                    width: 200,
+                    width: 350,
                   ),
                 ),
               ],

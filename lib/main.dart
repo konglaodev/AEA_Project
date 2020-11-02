@@ -13,6 +13,9 @@ import 'package:primaryschool/page/panel/game/imagepro.dart';
 import 'package:primaryschool/page/panel/game/imageprohome.dart';
 import 'package:primaryschool/page/panel/game/imagequiz.dart';
 import 'package:primaryschool/page/panel/game/random.dart';
+import 'package:primaryschool/page/panel/gamebodthrng/bodt2.dart';
+import 'package:primaryschool/page/panel/gamebodthrng/gamebodt2.dart';
+import 'package:primaryschool/page/panel/gamebodthrng/gamebodthrng.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson6.dart';
 import 'component/Playaudio.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lession1.dart';
@@ -318,6 +321,14 @@ class MyApp extends StatelessWidget {
         '/imgpro': (context) => Imagepro(),
         '/imgprotitle': (context) => Imgprotitle(),
         '/imgquiz': (context) => Imagequiz(),
+        
+
+        //gamebodthrng
+        '/bodthrngtitle': (context) => Gamebodthrng(), //title
+        '/bodthrngls2': (context) => Bodt2bt(), //gamebt bod t 2 title
+        '/bodthrngls2game': (context) => Gamebtls2(), //gamebt bod t 2 play
+
+        
       },
     );
   }

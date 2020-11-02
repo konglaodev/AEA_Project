@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:primaryschool/page/panel/SubjectGame.dart';
+import 'package:primaryschool/page/panel/subandgame.dart';
 
 class Menusub6 extends StatefulWidget {
   Menusub6({Key key}) : super(key: key);
@@ -40,8 +42,11 @@ class _Menusub6State extends State<Menusub6> {
               image: AssetImage('images/bgm/menu6.png'), fit: BoxFit.cover)),
       child: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
+            SizedBox(
+              height: 50.0,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -169,18 +174,26 @@ class _Menusub6State extends State<Menusub6> {
                 ),
               ],
             ),
-            SizedBox(
-              height: 20.0,
-            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 back(),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => Subandgame()),
+                      ModalRoute.withName('/subandjectGame'),
+                    );
+                  },
+                  child: Image.asset(
+                    "images/homepage.png",
+                    width: 250,
+                  ),
+                ),
                 next(),
               ],
-            ),
-            SizedBox(
-              height: 10.0,
             ),
           ],
         ),

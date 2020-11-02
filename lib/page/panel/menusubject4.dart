@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:primaryschool/page/panel/SubjectGame.dart';
 
 class Menusub4 extends StatefulWidget {
   Menusub4({Key key}) : super(key: key);
@@ -40,8 +41,11 @@ class _Menusub4State extends State<Menusub4> {
               image: AssetImage('images/bgm/menu4.png'), fit: BoxFit.cover)),
       child: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
+            SizedBox(
+              height: 50,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -169,18 +173,26 @@ class _Menusub4State extends State<Menusub4> {
                 ),
               ],
             ),
-            SizedBox(
-              height: 20.0,
-            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 back(),
+                FlatButton(
+                 onPressed: () {
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => SubjectGame()),
+                      ModalRoute.withName('/subandjectGame'),
+                    );
+                  },
+                  child: Image.asset(
+                    "images/homepage.png",
+                    width: 250,
+                  ),
+                ),
                 next(),
               ],
-            ),
-            SizedBox(
-              height: 10.0,
             ),
           ],
         ),

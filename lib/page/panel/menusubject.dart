@@ -44,7 +44,7 @@ class _MenusubState extends State<Menusub> {
       },
       child: Image.asset(
         "images/homepage.png",
-        width: 180.0,
+        width: 220,
       ),
     );
   }
@@ -59,6 +59,7 @@ class _MenusubState extends State<Menusub> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
+            SizedBox(height: 50,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -190,7 +191,7 @@ class _MenusubState extends State<Menusub> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 SizedBox(
-                  width: 100,
+                  width: 50,
                 ),
                 homebtn(),
                 next(),

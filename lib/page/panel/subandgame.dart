@@ -94,7 +94,7 @@ class _SubandgameState extends State<Subandgame> {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("images/bg.jpg"), fit: BoxFit.cover)),
+              image: AssetImage("images/dekkapok.png"), fit: BoxFit.cover)),
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,

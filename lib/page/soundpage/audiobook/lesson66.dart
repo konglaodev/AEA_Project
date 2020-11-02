@@ -53,6 +53,9 @@ class _Lesson66State extends State<Lesson66> {
   }
 
   @override
+  Color _iconColor1 = Colors.black;
+  Color _iconColor2 = Colors.black;
+  Color _iconColor3 = Colors.black;
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
@@ -87,7 +90,7 @@ class _Lesson66State extends State<Lesson66> {
             ),
           ),
         ),
-        bottomNavigationBar: Container(
+       bottomNavigationBar: Container(
           color: Colors.orange.shade700,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -95,28 +98,52 @@ class _Lesson66State extends State<Lesson66> {
               InkWell(
                 onTap: () {
                   _playSound();
+                  setState(() {
+                    _iconColor2 = Colors.black;
+                    _iconColor3 = Colors.black;
+                    _iconColor1 = Colors.white;
+                  });
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Icon(Icons.play_arrow),
+                  child: Icon(
+                    Icons.play_arrow,
+                    color: _iconColor1,
+                  ),
                 ),
               ),
               InkWell(
                 onTap: () {
                   _playpuase();
+                  setState(() {
+                    _iconColor2 = Colors.white;
+                    _iconColor1 = Colors.black;
+                    _iconColor3 = Colors.black;
+                  });
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Icon(Icons.pause),
+                  child: Icon(
+                    Icons.pause,
+                    color: _iconColor2,
+                  ),
                 ),
               ),
               InkWell(
                 onTap: () {
                   _playStop();
+                  setState(() {
+                    _iconColor1 = Colors.black;
+                    _iconColor3 = Colors.white;
+                    _iconColor2 = Colors.black;
+                  });
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Icon(Icons.stop),
+                  child: Icon(
+                    Icons.stop,
+                    color: _iconColor3,
+                  ),
                 ),
               )
             ],

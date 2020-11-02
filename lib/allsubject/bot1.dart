@@ -30,7 +30,7 @@ class _Bot1State extends State<Bot1> {
               color: Colors.white,
               icon: Icon(Icons.arrow_forward_ios),
               onPressed: () {
-                Navigator.pushNamed(context, '/bot2');
+                Navigator.pushReplacementNamed(context, '/bot2');
               },
             ),
           ],

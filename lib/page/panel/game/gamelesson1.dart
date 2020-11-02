@@ -53,7 +53,7 @@ class _DartgameoneState extends State<Dartgameone> {
           ],
         ).show();
       }
-      if (quizBrain.getTotalQuestionsAsked() <= 10) {
+      if (quizBrain.getTotalQuestionsAsked() <= 3) {
         quizBrain
             .nextQuestion(); //as button has been pressed the nextQuestion needs to be invoked, this will change the qnum and as the app refreshes the getQuestion will show the new question
       } else {
@@ -69,8 +69,8 @@ class _DartgameoneState extends State<Dartgameone> {
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
               onPressed: () => Navigator.pop(context),
-              width: 120,
-            )
+              width: 200,
+            ),
           ],
         ).show();
         quizBrain.reset();

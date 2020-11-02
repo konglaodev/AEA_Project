@@ -46,7 +46,7 @@ class _GameltwoState extends State<Gameltwo> {
                       builder: (BuildContext context) => _list[index].goto,
                     ));
               },
-              child: Padding(
+              child: Padding( 
                 padding: const EdgeInsets.fromLTRB(10, 35, 10, 10),
                 child: Stack(
                   children: [  
