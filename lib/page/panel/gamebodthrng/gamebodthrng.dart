@@ -39,7 +39,7 @@ class _GamebtgState extends State<Gamebtg> {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('images/bgm/menu2.png'), fit: BoxFit.cover)),
+              image: AssetImage('images/blackboard.jpg'), fit: BoxFit.cover)),
       child: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
