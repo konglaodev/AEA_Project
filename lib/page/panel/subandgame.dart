@@ -10,8 +10,11 @@ class Subandgame extends StatefulWidget {
 class _SubandgameState extends State<Subandgame> {
   Widget title() {
     return Container(
+       decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("images/Border2.png"), fit: BoxFit.fill)),
       width: 500,
-      color: Colors.orange.shade400,
+     
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -94,7 +97,7 @@ class _SubandgameState extends State<Subandgame> {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("images/dekkapok.png"), fit: BoxFit.cover)),
+              image: AssetImage("images/dekkapok.png"), fit: BoxFit.fill)),
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,

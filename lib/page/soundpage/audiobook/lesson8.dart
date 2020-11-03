@@ -53,7 +53,7 @@ class _Lesson8State extends State<Lesson8> {
   }
 
   @override
-   Color _iconColor1 = Colors.black;
+  Color _iconColor1 = Colors.black;
   Color _iconColor2 = Colors.black;
   Color _iconColor3 = Colors.black;
   Widget build(BuildContext context) {
@@ -66,7 +66,7 @@ class _Lesson8State extends State<Lesson8> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.orange.shade700,
-          elevation: 0.0,
+       
           title: Text('ຟືນດົ້ນດຽວດັງໄຟບໍ່ລຸກ'),
         ),
         body: Container(
@@ -84,13 +84,22 @@ class _Lesson8State extends State<Lesson8> {
                         ),
                       ],
                     ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          child: Image.asset('images/8.2.jpg'),
+                          width: 700,
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
             ),
           ),
         ),
-          bottomNavigationBar: Container(
+        bottomNavigationBar: Container(
           color: Colors.orange.shade700,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,

@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
         style: TextStyle(
             decoration: TextDecoration.none,
             color: Colors.black87,
-            fontSize: 30.0),
+            fontSize: 40.0),
       ),
     );
   }
@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
     return CircleAvatar(
       backgroundColor: Colors.white,
       foregroundColor: Colors.orangeAccent,
-      radius: 60,
+      radius: 120,
       child: Padding(
         padding: const EdgeInsets.fromLTRB(15, 0, 0, 0),
         child: FlatButton(

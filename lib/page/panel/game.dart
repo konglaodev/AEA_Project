@@ -10,8 +10,16 @@ class Game extends StatefulWidget {
 class _GameState extends State<Game> {
   Widget gametitle() {
     return Container(
-      color: Colors.greenAccent,
-      child: Text(
+    
+            decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("images/Border2.png"), fit: BoxFit.fill)),
+              width: 500,
+    
+         child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+      Text(
         "ກະລຸນາເລືອກເກມ",
         style: TextStyle(
             decoration: TextDecoration.none,
@@ -19,6 +27,7 @@ class _GameState extends State<Game> {
             color: Colors.white,
             fontWeight: FontWeight.bold),
       ),
+        ])
     );
   }
 
@@ -43,7 +52,7 @@ class _GameState extends State<Game> {
             Navigator.pushNamed(context, '/gamebt');
           },
           child: Image.asset(
-            "images/firstgbtn.png",
+            "images/game1.png",
             width: 300.0,
             height: 100.0,
           )),
@@ -57,7 +66,7 @@ class _GameState extends State<Game> {
             Navigator.pushNamed(context, '/randombt');
           },
           child: Image.asset(
-            "images/secondgbtn.png",
+            "images/game4.png",
             width: 300.0,
             height: 100.0,
           )),
@@ -71,7 +80,7 @@ class _GameState extends State<Game> {
                         Navigator.pushNamed(context, '/bodthrngls2');
                       },
           child: Image.asset(
-            "images/firstgbtn.png",
+            "images/game3.png",
             width: 300.0,
             height: 100.0,
           )),
@@ -85,7 +94,7 @@ class _GameState extends State<Game> {
             Navigator.pushNamed(context, '/imgprotitle');
           },
           child: Image.asset(
-            "images/secondgbtn.png",
+            "images/game2.png",
             width: 300.0,
             height: 100.0,
           )),
@@ -114,11 +123,11 @@ class _GameState extends State<Game> {
             
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [g1btn(), g2btn()],
+              children: [g1btn(),g4btn()],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [g3btn(), g4btn()],
+              children: [g3btn(), g2btn()],
             )
           ],
         ),

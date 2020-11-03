@@ -59,7 +59,7 @@ class _GamebtgState extends State<Gamebtg> {
                         height: 70.0,
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/bot11');
+                        Navigator.pushNamed(context, '/bodthrngls2game');
                       },
                     ),
                     FlatButton(
@@ -69,7 +69,7 @@ class _GamebtgState extends State<Gamebtg> {
                         height: 70.0,
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/bot12');
+                        Navigator.pushNamed(context, '/bodthrngls6game');
                       },
                     ),
                     FlatButton(
@@ -79,7 +79,7 @@ class _GamebtgState extends State<Gamebtg> {
                         height: 70.0,
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/bot13');
+                        Navigator.pushNamed(context, '/bodthrngls9game');
                       },
                     ),
                   ],
@@ -96,7 +96,7 @@ class _GamebtgState extends State<Gamebtg> {
                         height: 70.0,
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/bot14');
+                        Navigator.pushNamed(context, '/bodthrngls10game');
                       },
                     ),
                     FlatButton(
@@ -106,7 +106,7 @@ class _GamebtgState extends State<Gamebtg> {
                         height: 70.0,
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/bot15');
+                        Navigator.pushNamed(context, '/bodthrngls14game');
                       },
                     ),
                     FlatButton(
@@ -116,7 +116,7 @@ class _GamebtgState extends State<Gamebtg> {
                         height: 70.0,
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/bot15');
+                        Navigator.pushNamed(context, '/bodthrngls17game');
                       },
                     ),
                   ],
@@ -128,12 +128,12 @@ class _GamebtgState extends State<Gamebtg> {
                     ),
                     FlatButton(
                       child: Image.asset(
-                        'images/31.png',
+                        'images/38.png',
                         width: 140.0,
                         height: 70.0,
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/bot16');
+                        Navigator.pushNamed(context, '/bodthrngls38game');
                       },
                     ),
                     FlatButton(
@@ -143,7 +143,7 @@ class _GamebtgState extends State<Gamebtg> {
                         height: 70.0,
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/bot17');
+                        Navigator.pushNamed(context,  '/bodthrngls44game');
                       },
                     ),
                     FlatButton(
@@ -153,7 +153,7 @@ class _GamebtgState extends State<Gamebtg> {
                         height: 70.0,
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/bot17');
+                        Navigator.pushNamed(context,'/bodthrngls46game');
                       },
                     ),
                   ],
@@ -167,7 +167,7 @@ class _GamebtgState extends State<Gamebtg> {
                         height: 70.0,
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/bot18');
+                        Navigator.pushNamed(context,'/bodthrngls48game');
                       },
                     ),
                     FlatButton(
@@ -177,7 +177,7 @@ class _GamebtgState extends State<Gamebtg> {
                         height: 70.0,
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/bot19');
+                        Navigator.pushNamed(context, '/bodthrngls52game');
                       },
                     ),
                     FlatButton(
@@ -187,7 +187,7 @@ class _GamebtgState extends State<Gamebtg> {
                         height: 70.0,
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/bot20');
+                        Navigator.pushNamed(context, '/bodthrngls58game');
                       },
                     ),
                   ],

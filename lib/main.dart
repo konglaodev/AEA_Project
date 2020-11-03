@@ -13,7 +13,18 @@ import 'package:primaryschool/page/panel/game/imagepro.dart';
 import 'package:primaryschool/page/panel/game/imageprohome.dart';
 import 'package:primaryschool/page/panel/game/imagequiz.dart';
 import 'package:primaryschool/page/panel/game/random.dart';
+import 'package:primaryschool/page/panel/gamebodthrng/bod14/bod14.dart';
+import 'package:primaryschool/page/panel/gamebodthrng/bod17/bod17.dart';
+import 'package:primaryschool/page/panel/gamebodthrng/bod31/bod31.dart';
+import 'package:primaryschool/page/panel/gamebodthrng/bod46/bod46.dart';
+import 'package:primaryschool/page/panel/gamebodthrng/bod48/bod48.dart';
+import 'package:primaryschool/page/panel/gamebodthrng/bod52/bod52.dart';
+import 'package:primaryschool/page/panel/gamebodthrng/bod58/bod58.dart';
+import 'package:primaryschool/page/panel/gamebodthrng/bod6/bodt6.dart';
+import 'package:primaryschool/page/panel/gamebodthrng/bod9/bod9.dart';
+import 'package:primaryschool/page/panel/gamebodthrng/bodt10/bod10.dart';
 import 'package:primaryschool/page/panel/gamebodthrng/bodt2.dart';
+import 'package:primaryschool/page/panel/gamebodthrng/bodt44/bod44.dart';
 import 'package:primaryschool/page/panel/gamebodthrng/gamebodt2.dart';
 import 'package:primaryschool/page/panel/gamebodthrng/gamebodthrng.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson6.dart';
@@ -327,6 +338,17 @@ class MyApp extends StatelessWidget {
         '/bodthrngtitle': (context) => Gamebodthrng(), //title
         '/bodthrngls2': (context) => Bodt2bt(), //gamebt bod t 2 title
         '/bodthrngls2game': (context) => Gamebtls2(), //gamebt bod t 2 play
+        '/bodthrngls6game': (context) => Bod6(), //gamebt bod t 2 play
+        '/bodthrngls9game': (context) => Bod9(), //gamebt bod t 2 play
+        '/bodthrngls10game': (context) => Bod10(), //gamebt bod t 2 play
+        '/bodthrngls14game': (context) => Bod14(), //gamebt bod t 2 play
+        '/bodthrngls17game': (context) => Bod17(), //gamebt bod t 2 play
+        '/bodthrngls38game': (context) => Bod31(), //gamebt bod t 2 play
+        '/bodthrngls44game': (context) => Bod44(), //gamebt bod t 44 play
+        '/bodthrngls46game': (context) => Bod46(), //gamebt bod t 46 play
+        '/bodthrngls48game': (context) => Bod48(), //gamebt bod t 48 play
+        '/bodthrngls52game': (context) => Bod52(), //gamebt bod t 52 play
+        '/bodthrngls58game': (context) => Bod58(), //gamebt bod t 58 play
 
         
       },

@@ -24,7 +24,7 @@ class _Bodt2State extends State<Bodt2> {
     return Container(
       child: FlatButton(
         onPressed: () {
-          Navigator.pushNamed(context, '/gamefirstlesson');
+          Navigator.pushNamed(context, '/bodthrngtitle');
         },
         child: Image.asset(
           'images/start.png',
@@ -53,7 +53,7 @@ class _Bodt2State extends State<Bodt2> {
     return Container(
       child: FlatButton(
         onPressed: () {
-          Navigator.pushNamed(context,  '/bodthrngls2game');
+          Navigator.pushNamed(context,  '/bodthrngls17game');
         },
         child: Image.asset(
           'images/hint.png',
