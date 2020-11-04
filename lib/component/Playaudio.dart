@@ -207,7 +207,7 @@ class _PlayaudioState extends State<Playaudio> {
           BottomNavigationBarItem(
             icon: Icon(Icons.library_books),
             title: Text(
-              'ນີືທານ',
+              'ນິທານ',
             ),
           ),
           BottomNavigationBarItem(

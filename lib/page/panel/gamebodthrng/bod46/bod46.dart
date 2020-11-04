@@ -140,7 +140,7 @@ class _Bod46State extends State<Bod46> {
   Widget title() {
     return Container(
       child: Text(
-        "ເລືອກຄຳຕອບຈາກຄຳອະທິບາຍສັບ",
+        "ບົດທີ46: ບ້ານເກີດເມືອງນອນ",
         style: TextStyle(
             color: Colors.black,
             fontSize: 20.0,

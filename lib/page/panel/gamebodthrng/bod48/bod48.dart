@@ -139,7 +139,7 @@ class _Bod48State extends State<Bod48> {
   Widget title() {
     return Container(
       child: Text(
-        "ເລືອກຄຳຕອບຈາກຄຳອະທິບາຍສັບ",
+        "ບົດທີ48: ສາຍນ້ຳລໍາທານ",
         style: TextStyle(
             color: Colors.black,
             fontSize: 20.0,

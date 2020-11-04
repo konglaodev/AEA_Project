@@ -9,23 +9,23 @@ class Gamebt extends StatefulWidget {
 
 class _GamebtState extends State<Gamebt> {
   Widget startgame() {
-    return Container(
-      child: FlatButton(
+    return 
+       FlatButton(
         onPressed: () {
           Navigator.pushNamed(context, '/gamefirstlesson');
         },
         child: Image.asset(
           'images/start.png',
-          width: 350.0,
-          height: 200.0,
+          width: 300.0,
+          height: 150.0,
         ),
-      ),
+      
     );
   }
 
   Widget back() {
-    return Container(
-      child: FlatButton(
+    return 
+       FlatButton(
         onPressed: () {
           Navigator.pop(context);
         },
@@ -33,22 +33,23 @@ class _GamebtState extends State<Gamebt> {
           "images/backbt.png",
           width: 50.0,
         ),
-      ),
+      
     );
   }
 
   Widget hintgame() {
-    return Container(
-      child: FlatButton(
+    return
+      
+       FlatButton(
         onPressed: () {
-          Navigator.pushNamed(context, '/firstbodhn');
+          Navigator.pushNamed(context, '/game1howto');
         },
         child: Image.asset(
           'images/hint.png',
-          width: 350.0,
-          height: 200.0,
+          width: 300.0,
+          height: 150.0,
         ),
-      ),
+      
     );
   }
 
@@ -63,23 +64,16 @@ class _GamebtState extends State<Gamebt> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            SizedBox(
-              height: 10.0,
-            ),
+                  
+
             Row(
               children: [back()],
             ),
             Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [startgame(), hintgame()],
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [startgame(),SizedBox(height: 20,) ,hintgame(),SizedBox(height: 20,)],
             ),
-            SizedBox(
-              height: 20.0,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [],
-            )
+         
           ],
         ),
       ),

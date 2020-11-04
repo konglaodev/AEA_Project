@@ -139,7 +139,7 @@ class _Bod52State extends State<Bod52> {
   Widget title() {
     return Container(
       child: Text(
-        "ເລືອກຄຳຕອບຈາກຄຳອະທິບາຍສັບ",
+        "ບົດທີ52: ປະໂຫຍດຂອງສັດລາກແກ່",
         style: TextStyle(
             color: Colors.black,
             fontSize: 20.0,

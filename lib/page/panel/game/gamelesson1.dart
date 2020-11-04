@@ -108,7 +108,7 @@ class _DartgameoneState extends State<Dartgameone> {
                 quizBrain.getChoice(btnNo),
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 16,
+                  fontSize: 14,
                 ),
               ),
             ],
@@ -134,15 +134,15 @@ class _DartgameoneState extends State<Dartgameone> {
   }
 
   Widget title() {
-    return Container(
-      child: Text(
+    return 
+       Text(
         "ເລືອກຄຳຕອບຈາກຄຳອະທິບາຍສັບ",
         style: TextStyle(
             color: Colors.black,
             fontSize: 20.0,
             fontWeight: FontWeight.bold,
             decoration: TextDecoration.none),
-      ),
+      
     );
   }
    Widget backhome() {
@@ -182,7 +182,7 @@ class _DartgameoneState extends State<Dartgameone> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                title(),
+                // title(),
                 Text(
                   getQuestionNo(),
                   style: TextStyle(
@@ -198,15 +198,14 @@ class _DartgameoneState extends State<Dartgameone> {
           Column(
             
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-            child: Container(
+        
+             Container(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
                     width: 500.0,
-                    height: 110.0,
+                    height: 100.0,
                     child: Container(
                       decoration: BoxDecoration(
                           image: DecorationImage(
@@ -233,13 +232,10 @@ class _DartgameoneState extends State<Dartgameone> {
                   ),
                 ],
               ),
-            ),
+            
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0,45,0,0),
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 0, 120),
-              child: Row(
+         
+               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Column(
@@ -249,9 +245,7 @@ class _DartgameoneState extends State<Dartgameone> {
                       createChoiceButton(2),
                     ],
                   ),
-                  SizedBox(
-                    width: 200.0,
-                  ),
+                  
                   Column(
                     children: [
                       createChoiceButton(3),
@@ -261,8 +255,6 @@ class _DartgameoneState extends State<Dartgameone> {
                   ),
                 ],
               ),
-            ),
-          ),
         ],
       ),
     );

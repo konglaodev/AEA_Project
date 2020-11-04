@@ -141,7 +141,7 @@ String setScore() {
   Widget title() {
     return Container(
       child: Text(
-        "ເລືອກຄຳຕອບຈາກຄຳອະທິບາຍສັບ",
+        "ບົດທີ17: ກ່ອມນ້ອງ",
         style: TextStyle(
             color: Colors.black,
             fontSize: 20.0,

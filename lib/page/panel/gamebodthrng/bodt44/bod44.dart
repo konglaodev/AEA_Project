@@ -139,7 +139,7 @@ class _Bod44State extends State<Bod44> {
   Widget title() {
     return Container(
       child: Text(
-        "ເລືອກຄຳຕອບຈາກຄຳອະທິບາຍສັບ",
+        "ບົດທີ44: ບຸນປີໃໝ່ລາວ",
         style: TextStyle(
             color: Colors.black,
             fontSize: 20.0,

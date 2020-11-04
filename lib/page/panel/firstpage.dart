@@ -8,15 +8,18 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   Widget text() {
-    return SizedBox(
-      height: 70.0,
-      child: Text(
-        'ຍີນດີຕ້ອນຮັບເຂົ້າສູ່ຫ້ອງຮຽນເອເລັກໂຕນີກ',
-        style: TextStyle(
-            decoration: TextDecoration.none,
-            color: Colors.black87,
-            fontSize: 40.0),
-      ),
+    return Padding(
+      padding: const EdgeInsets.only(top:50),
+    
+      
+        child: Text(
+          'ຍີນດີຕ້ອນຮັບເຂົ້າສູ່ແອພນັກຮຽນ ປໍ3',
+          style: TextStyle(
+              decoration: TextDecoration.none,
+              color: Colors.black87,
+              fontSize: 30),
+        ),
+      
     );
   }
 
@@ -24,7 +27,7 @@ class _HomePageState extends State<HomePage> {
     return CircleAvatar(
       backgroundColor: Colors.white,
       foregroundColor: Colors.orangeAccent,
-      radius: 120,
+      radius:70,
       child: Padding(
         padding: const EdgeInsets.fromLTRB(15, 0, 0, 0),
         child: FlatButton(
@@ -33,7 +36,7 @@ class _HomePageState extends State<HomePage> {
           },
           child: Image.asset(
             'images/playbt.png',
-            width: 120,
+            width:70 ,
           ),
         ),
       ),
@@ -52,6 +55,7 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
+
             text(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

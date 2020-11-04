@@ -6,7 +6,7 @@ class Imgprotitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child:Drag()  ,
+      child: Drag(),
     );
   }
 }
@@ -19,19 +19,22 @@ class Drag extends StatefulWidget {
 }
 
 class _DragState extends State<Drag> {
-
-   Widget startgame(){
+  Widget startgame() {
     return Container(
       child: FlatButton(
         onPressed: () {
-          Navigator.pushNamed(context,'/imgquiz');
+          Navigator.pushNamed(context, '/imgquiz');
         },
-        child: Image.asset('images/start.png',width: 350.0,
-            height: 200.0,),
+        child: Image.asset(
+          'images/start.png',
+          width: 250.0,
+          height: 100.0,
+        ),
       ),
     );
   }
-Widget back() {
+
+  Widget back() {
     return Container(
       child: FlatButton(
         onPressed: () {
@@ -45,45 +48,44 @@ Widget back() {
     );
   }
 
-
-   Widget hintgame(){
+  Widget hintgame() {
     return Container(
       child: FlatButton(
         onPressed: () {
-          Navigator.pushNamed(context,'/firstbodhn');
+          Navigator.pushNamed(context, '/firstbodhn');
         },
-        child: Image.asset('images/hint.png',width: 350.0,
-            height: 200.0,),
+        child: Image.asset(
+          'images/hint.png',
+          width: 250.0,
+          height: 100.0,
+        ),
       ),
     );
   }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("images/NarinterfacegameBG.jpg"), fit: BoxFit.cover)),
+              image: AssetImage("images/NarinterfacegameBG.jpg"),
+              fit: BoxFit.cover)),
       child: Center(
         child: Column(
+          mainAxisAlignment:MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            SizedBox(
-              height: 10.0,
-            ),
+           
             Row(
               children: [back()],
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [startgame(),hintgame()],
+              children: [startgame(),SizedBox(height: 50,), hintgame()],
             ),
             SizedBox(
               height: 20.0,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [],
-            )
           ],
         ),
       ),

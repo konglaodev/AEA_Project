@@ -23,7 +23,7 @@ class _SubandgameState extends State<Subandgame> {
             style: TextStyle(
                 decoration: TextDecoration.none,
                 color: Colors.white,
-                fontSize: 50.0,
+                fontSize: 30.0,
                 fontWeight: FontWeight.bold),
           ),
         ],

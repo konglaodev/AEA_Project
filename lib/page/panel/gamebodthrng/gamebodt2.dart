@@ -139,7 +139,7 @@ class _Gamebtls2State extends State<Gamebtls2> {
   Widget title() {
     return Container(
       child: Text(
-        "ເລືອກຄຳຕອບຈາກຄຳອະທິບາຍສັບ",
+        "ບົດທີ2: ໂຮງຮຽນຂອງຂ້ອຍ",
         style: TextStyle(
             color: Colors.black,
             fontSize: 20.0,

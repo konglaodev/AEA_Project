@@ -9,6 +9,7 @@ import 'package:primaryschool/page/panel/game/dragcar.dart';
 import 'package:primaryschool/page/panel/game/dragplant.dart';
 import 'package:primaryschool/page/panel/game/dragselect.dart';
 import 'package:primaryschool/page/panel/game/game2.dart';
+import 'package:primaryschool/page/panel/game/howtoplay/howgame1.dart';
 import 'package:primaryschool/page/panel/game/imagepro.dart';
 import 'package:primaryschool/page/panel/game/imageprohome.dart';
 import 'package:primaryschool/page/panel/game/imagequiz.dart';
@@ -350,6 +351,9 @@ class MyApp extends StatelessWidget {
         '/bodthrngls52game': (context) => Bod52(), //gamebt bod t 52 play
         '/bodthrngls58game': (context) => Bod58(), //gamebt bod t 58 play
 
+        //tutorial
+                //game tutorial
+         '/game1howto': (context) => Howgame1(),
         
       },
     );

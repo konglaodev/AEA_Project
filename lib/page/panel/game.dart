@@ -23,7 +23,7 @@ class _GameState extends State<Game> {
         "ກະລຸນາເລືອກເກມ",
         style: TextStyle(
             decoration: TextDecoration.none,
-            fontSize: 50.0,
+            fontSize: 30.0,
             color: Colors.white,
             fontWeight: FontWeight.bold),
       ),
