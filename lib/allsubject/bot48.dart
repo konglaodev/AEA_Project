@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:primaryschool/page/panel/menusubject5.dart';
+
 
 class Bot48 extends StatefulWidget {
   @override
@@ -9,16 +11,41 @@ class _Bot48State extends State<Bot48> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+       appBar: AppBar(
+        //add2 ກັບໃປໜ້າເກົ່າ
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/bot47');
+          },
+          icon: Icon(Icons.arrow_back_ios),
+        ),
+        //
         backgroundColor: Colors.orange.shade700,
         elevation: 0.0,
         title: Text('ບົດທີ48'),
         actions: <Widget>[
+          //add3
+          IconButton(
+            color: Colors.white,
+            icon: Icon(Icons.home),
+            onPressed: () {
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(builder: (BuildContext context) => Menusub5()),
+                ModalRoute.withName('/menusub5'),
+              );
+            },
+          ),
+          SizedBox(
+            width: 50,
+          ),
+          //
           IconButton(
             color: Colors.white,
             icon: Icon(Icons.arrow_forward_ios),
             onPressed: () {
-              Navigator.pushNamed(context, '/bot49');
+              //ໃປໜ້າໃຫມ່
+              Navigator.pushReplacementNamed(context, '/bot49');
             },
           ),
         ],
