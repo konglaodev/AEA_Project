@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:primaryschool/page/panel/SubjectGame.dart';
+import 'package:primaryschool/page/panel/subandgame.dart';
 
 class Menusub extends StatefulWidget {
   Menusub({Key key}) : super(key: key);
@@ -38,8 +38,8 @@ class _MenusubState extends State<Menusub> {
       onPressed: () {
         Navigator.pushAndRemoveUntil(
           context,
-          MaterialPageRoute(builder: (BuildContext context) => SubjectGame()),
-          ModalRoute.withName('/subjectGame'),
+          MaterialPageRoute(builder: (BuildContext context) => Subandgame()),
+          ModalRoute.withName('/subandjectGame'),
         );
       },
       child: Image.asset(
@@ -54,12 +54,15 @@ class _MenusubState extends State<Menusub> {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('images/bgm/menu1.jpg'), fit: BoxFit.cover)),
+              image: AssetImage('images/bgbh.jpg'), fit: BoxFit.cover)),
       child: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            SizedBox(height: 50,),
+            SizedBox(
+              height: 50,
+            ),
+            //1
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -187,15 +190,19 @@ class _MenusubState extends State<Menusub> {
                 ),
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                SizedBox(
-                  width: 50,
-                ),
-                homebtn(),
-                next(),
-              ],
+            //2
+            Padding(
+              padding: const EdgeInsets.only(bottom: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  SizedBox(
+                    width: 50,
+                  ),
+                  homebtn(),
+                  next(),
+                ],
+              ),
             ),
           ],
         ),

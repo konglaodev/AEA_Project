@@ -6,7 +6,7 @@ class Bodt2bt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Bodt2() ,
+      child: Bodt2(),
     );
   }
 }
@@ -19,50 +19,44 @@ class Bodt2 extends StatefulWidget {
 }
 
 class _Bodt2State extends State<Bodt2> {
-
   Widget startgame() {
-    return Container(
-      child: FlatButton(
-        onPressed: () {
-          Navigator.pushNamed(context, '/bodthrngtitle');
-        },
-        child: Image.asset(
-          'images/start.png',
-          width: 350.0,
-          height: 200.0,
-        ),
+    return FlatButton(
+      onPressed: () {
+        Navigator.pushNamed(context, '/bodthrngtitle');
+      },
+      child: Image.asset(
+        'images/start.png',
+        width: 270.0,
+        height: 110.0,
       ),
     );
   }
 
   Widget back() {
-    return Container(
-      child: FlatButton(
-        onPressed: () {
-          Navigator.pop(context);
-        },
-        child: Image.asset(
-          "images/backbt.png",
-          width: 50.0,
-        ),
+    return FlatButton(
+      onPressed: () {
+        Navigator.pop(context);
+      },
+      child: Image.asset(
+        "images/backbt.png",
+        width: 30.0,
       ),
     );
   }
 
   Widget hintgame() {
-    return Container(
-      child: FlatButton(
-        onPressed: () {
-          Navigator.pushNamed(context,  '/bodthrngls17game');
-        },
-        child: Image.asset(
-          'images/hint.png',
-          width: 350.0,
-          height: 200.0,
-        ),
+    return FlatButton(
+      onPressed: () {
+        Navigator.pushNamed(context, '/bodthrngls17game');
+      },
+      child: Image.asset(
+        'images/hint.png',
+        width: 270.0,
+        height: 110.0,
       ),
     );
   }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -70,29 +64,24 @@ class _Bodt2State extends State<Bodt2> {
           image: DecorationImage(
               image: AssetImage("images/NarinterfacegameBG.jpg"),
               fit: BoxFit.cover)),
-      child: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            SizedBox(
-              height: 10.0,
-            ),
-            Row(
-              children: [back()],
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [startgame(), hintgame()],
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [],
-            )
-          ],
-        ),
+      child: Column(
+        // crossAxisAlignment: CrossAxisAlignment.center,
+        // mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [back()],
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [startgame(), hintgame()],
+          ),
+          SizedBox(
+            height: 30.0,
+          )
+        ],
       ),
     );
   }

@@ -10,11 +10,11 @@ class Subandgame extends StatefulWidget {
 class _SubandgameState extends State<Subandgame> {
   Widget title() {
     return Container(
-       decoration: BoxDecoration(
+      decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage("images/Border2.png"), fit: BoxFit.fill)),
-      width: 500,
-     
+      width: 400,
+      height: 100,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -23,7 +23,7 @@ class _SubandgameState extends State<Subandgame> {
             style: TextStyle(
                 decoration: TextDecoration.none,
                 color: Colors.white,
-                fontSize: 30.0,
+                fontSize: 35.0,
                 fontWeight: FontWeight.bold),
           ),
         ],
@@ -31,6 +31,7 @@ class _SubandgameState extends State<Subandgame> {
     );
   }
 
+//ບົດຮຽນ
   Widget firstbutton() {
     return Container(
       child: FlatButton(
@@ -46,6 +47,7 @@ class _SubandgameState extends State<Subandgame> {
     );
   }
 
+//ປຸ່ມໜ້າເກມ
   Widget secondbutton() {
     return Container(
       child: FlatButton(
@@ -68,17 +70,8 @@ class _SubandgameState extends State<Subandgame> {
         },
         child: Image.asset(
           "images/backbt.png",
-          width: 50.0,
+          width: 30.0,
         ),
-      ),
-    );
-  }
-
-  Widget icon2() {
-    return Container(
-      child: Image.asset(
-        "images/btnext.png",
-        width: 50.0,
       ),
     );
   }
@@ -97,7 +90,7 @@ class _SubandgameState extends State<Subandgame> {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("images/dekkapok.png"), fit: BoxFit.fill)),
+              image: AssetImage("images/dekkapok.png"), fit: BoxFit.cover)),
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,

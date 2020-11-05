@@ -26,7 +26,7 @@ class _Menusub7State extends State<Menusub7> {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('images/bgm/menu6.png'), fit: BoxFit.cover)),
+              image: AssetImage('images/bgbh.jpg'), fit: BoxFit.cover)),
       child: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -114,6 +114,7 @@ class _Menusub7State extends State<Menusub7> {
             SizedBox(
               height: 20.0,
             ),
+            //
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[

@@ -372,7 +372,6 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                                     goToResult();
                                   });
                                 }
-                                
                               },
                               child: Container(
                                 padding: EdgeInsets.all(15.0),
