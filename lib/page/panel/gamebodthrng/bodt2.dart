@@ -20,14 +20,16 @@ class Bodt2 extends StatefulWidget {
 
 class _Bodt2State extends State<Bodt2> {
   Widget startgame() {
-    return FlatButton(
-      onPressed: () {
-        Navigator.pushNamed(context, '/bodthrngtitle');
-      },
-      child: Image.asset(
-        'images/start.png',
-        width: 270.0,
-        height: 110.0,
+    return Container(
+      width: 270.0,
+      height: 110.0,
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('images/start.png'), fit: BoxFit.fill)),
+      child: FlatButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/bodthrngtitle');
+        },
       ),
     );
   }
@@ -45,14 +47,16 @@ class _Bodt2State extends State<Bodt2> {
   }
 
   Widget hintgame() {
-    return FlatButton(
-      onPressed: () {
-        Navigator.pushNamed(context, '/bodthrngls17game');
-      },
-      child: Image.asset(
-        'images/hint.png',
-        width: 270.0,
-        height: 110.0,
+    return Container(
+      width: 270.0,
+      height: 110.0,
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('images/hint.png'), fit: BoxFit.fill)),
+      child: FlatButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/bodthrngls17game');
+        },
       ),
     );
   }
@@ -63,7 +67,7 @@ class _Bodt2State extends State<Bodt2> {
       decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage("images/NarinterfacegameBG.jpg"),
-              fit: BoxFit.cover)),
+              fit: BoxFit.fill)),
       child: Column(
         // crossAxisAlignment: CrossAxisAlignment.center,
         // mainAxisAlignment: MainAxisAlignment.center,
@@ -76,7 +80,13 @@ class _Bodt2State extends State<Bodt2> {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [startgame(), hintgame()],
+            children: [
+              startgame(),
+              SizedBox(
+                height: 10,
+              ),
+              hintgame()
+            ],
           ),
           SizedBox(
             height: 30.0,
