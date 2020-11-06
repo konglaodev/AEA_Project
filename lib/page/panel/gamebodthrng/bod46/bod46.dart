@@ -150,7 +150,7 @@ class _Bod46State extends State<Bod46> {
     );
   }
 
-  Widget backhome() {
+ Widget backhome() {
     return Container(
       child: FlatButton(
         onPressed: () {
@@ -193,15 +193,14 @@ class _Bod46State extends State<Bod46> {
             ),
           ),
           Column(),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-            child: Container(
+         
+           Container(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
                     width: 500.0,
-                    height: 110.0,
+                    height: 100.0,
                     child: Container(
                       decoration: BoxDecoration(
                           image: DecorationImage(
@@ -239,39 +238,32 @@ class _Bod46State extends State<Bod46> {
                 ],
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0, 45, 0, 0),
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 0, 100),
-              child: Row(
+
+         
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Column(
                     children: [
                       createChoiceButton(1),
                       SizedBox(
-                        height: 35.0,
+                        height: 20.0,
                       ),
                       createChoiceButton(2),
                     ],
                   ),
-                  SizedBox(
-                    width: 200.0,
-                  ),
+                  
                   Column(
                     children: [
                       createChoiceButton(3),
                       SizedBox(
-                        height: 35.0,
+                        height: 20.0,
                       ),
                       createChoiceButton(4),
                     ],
                   ),
                 ],
               ),
-            ),
-          ),
         ],
       ),
     );

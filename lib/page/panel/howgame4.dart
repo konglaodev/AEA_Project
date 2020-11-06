@@ -27,8 +27,10 @@ class _Howto4State extends State<Howto4> {
                             'images/Nar 7.jpg',
                           ),
                           Image.asset(
-                            'Nar 10.jpg',
+                            'images/howto4.jpg',
                           ),
+                       
+                          
                         ],
                       ),
                     ),

@@ -35,7 +35,7 @@ class _DartgameoneState extends State<Dartgameone> {
             .getAnswer(); //This is put on top of the line below because the line below changes the qnum index, and we need it to get the correct ans
     bool isCorrect = quizBrain.checkAnswer(choicNo);
     setState(() {
-      if (isCorrect == false && quizBrain.getTotalQuestionsAsked() > 1) {
+      if (isCorrect == false && quizBrain.getTotalQuestionsAsked() > 10) {
         Alert(
           context: context,
           type: AlertType.error,
@@ -61,7 +61,7 @@ class _DartgameoneState extends State<Dartgameone> {
           context: context,
           type: AlertType.success,
           title: "ຕອບຄົບທຸກຂໍ້ແລ້ວ",
-          desc: 'ຕອບຖືກທັງຫມົດ: ',
+          // desc: 'ຕອບຖືກທັງຫມົດ: ',
           buttons: [
             DialogButton(
               child: Text(

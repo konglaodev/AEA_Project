@@ -48,8 +48,8 @@ class _Bodt2State extends State<Bodt2> {
 
   Widget hintgame() {
     return Container(
-      width: 270.0,
-      height: 110.0,
+      width: 200.0,
+      height: 100.0,
       decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage('images/hint.png'), fit: BoxFit.fill)),

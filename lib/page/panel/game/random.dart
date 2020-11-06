@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
- 
 class Randomimg extends StatefulWidget {
   Randomimg({Key key}) : super(key: key);
 
@@ -9,44 +8,49 @@ class Randomimg extends StatefulWidget {
 }
 
 class _RandomimgState extends State<Randomimg> {
-
   Widget startgame() {
     return Container(
-      decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('images/start.png'), fit: BoxFit.fill)),
       width: 200.0,
       height: 100.0,
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("images/start.png"), fit: BoxFit.fill)),
       child: FlatButton(
         onPressed: () {
           Navigator.pushNamed(context, '/randomtwo');
         },
+        // child: Image.asset(
+        //   'images/start.png',
+        // ),
       ),
     );
   }
 
   Widget back() {
-    return FlatButton(
-      onPressed: () {
-        Navigator.pop(context);
-      },
-      child: Image.asset(
-        "images/backbt.png",
-        width: 30.0,
+    return Padding(
+      padding: const EdgeInsets.only(top: 10),
+      child: FlatButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        child: Image.asset(
+          "images/backbt.png",
+          width: 30.0,
+        ),
       ),
     );
   }
 
   Widget hintgame() {
     return Container(
-      decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('images/hint.png'), fit: BoxFit.fill)),
       width: 200.0,
       height: 100.0,
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("images/hint.png"), fit: BoxFit.fill)),
       child: FlatButton(
         onPressed: () {
-          Navigator.pushNamed(context, '/game4howto');
+          Navigator.pushNamed(context,  '/game4howto');
         },
       ),
     );
@@ -60,6 +64,7 @@ class _RandomimgState extends State<Randomimg> {
               image: AssetImage("images/NarinterfacegameBG.jpg"),
               fit: BoxFit.fill)),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Row(
@@ -69,14 +74,14 @@ class _RandomimgState extends State<Randomimg> {
             children: [
               startgame(),
               SizedBox(
-                height: 20,
+                height: 50,
               ),
-              hintgame(),
+              hintgame()
             ],
           ),
           SizedBox(
             height: 30,
-          ),
+          )
         ],
       ),
     );

@@ -74,7 +74,7 @@ List<Questions> getQuestion() {
     op1: "ວັດທາດຫຼວງ",
     op2: "ວັດພູສະຫວັນນະເຂດ",
     op3: "ວັດພູຈຳປາສັກ",
-    op4: "ທົ່ງໃຫຫີນ",
+    op4: "ທົ່ງໄຫຫີນ",
     answer: "ວັດພູຈຳປາສັກ",
   );
   ques.add(que);
@@ -104,7 +104,7 @@ List<Questions> getQuestion() {
   que = new Questions(
     que: "ອະທິບາຍຄວາມຫມາຍຮູບຕໍ່ໄປນີ້",
     image: "assets/images/pic11.jpg",
-    op1: "ບຸນປີໄໝ່ລາວ",
+    op1: "ບຸນປີໃໝ່ລາວ",
     op2: "ບຸນກິນຈຽງຂອງເຜົ່າມົ້ງ",
     op3: "ພິທີສູ່ຂວັນ",
     op4: "ບຸນເກຼິຂອງເຜົ່າກຶມມຸ",
