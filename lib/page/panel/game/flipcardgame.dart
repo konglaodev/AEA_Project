@@ -94,7 +94,7 @@ class _FlipCardGaneState extends State<FlipCardGane> {
   Widget build(BuildContext context) {
     return _isFinished
         ? Scaffold(
-            backgroundColor: Colors.green[100],
+            backgroundColor: Colors.cyan[100],
             body: Center(
               child: GestureDetector(
                 onTap: () {
@@ -142,7 +142,7 @@ class _FlipCardGaneState extends State<FlipCardGane> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SizedBox(
-                        width: 800,
+                        width: 700,
                         child: GridView.builder(
                           shrinkWrap: true,
                           physics: NeverScrollableScrollPhysics(),

@@ -27,9 +27,7 @@ class _RandomimgState extends State<Randomimg> {
   }
 
   Widget back() {
-    return Padding(
-      padding: const EdgeInsets.only(top: 10),
-      child: FlatButton(
+    return  FlatButton(
         onPressed: () {
           Navigator.pop(context);
         },
@@ -37,7 +35,6 @@ class _RandomimgState extends State<Randomimg> {
           "images/backbt.png",
           width: 30.0,
         ),
-      ),
     );
   }
 
@@ -74,7 +71,7 @@ class _RandomimgState extends State<Randomimg> {
             children: [
               startgame(),
               SizedBox(
-                height: 50,
+                height: 10,
               ),
               hintgame()
             ],

@@ -5,10 +5,10 @@ enum Level { Hard, Medium, Easy }
 
 List<String> fillSourceArray() {
   return [
-    'assets/animalspics/star.png',
-    'assets/animalspics/star.png',
+    'assets/animalspics/unnamed.png',
+    'assets/animalspics/unnamed.png',
     'assets/animalspics/scissor.png',
-    'assets/animalspics/scissor.png',
+    'assets/animalspics/scissor.png', 
     'assets/animalspics/textbook.png',
     'assets/animalspics/textbook.png',
     'assets/animalspics/sharpener.png',

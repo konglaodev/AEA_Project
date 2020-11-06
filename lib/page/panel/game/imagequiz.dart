@@ -40,7 +40,7 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
     totalQue = _questions.length;
 
     animationController = AnimationController(
-        duration: const Duration(seconds: 1000), vsync: this);
+        duration: const Duration(seconds: 5), vsync: this);
 
     animation =
         Tween(begin: animBegin, end: animEnd).animate(animationController)
@@ -158,7 +158,7 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                 Column(
                   children: <Widget>[
                     Container(
-                      padding: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
+                    
                       child: Text(
                         "${_questions[index].getQue()}",
                         style: TextStyle(
@@ -172,7 +172,7 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                         image: AssetImage(
                           '${_questions[index].getImage()}',
                         ),
-                        width: 400,
+                        width: 300,
                       ),
                     ),
                   ],

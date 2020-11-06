@@ -35,7 +35,7 @@ class _DartgameoneState extends State<Dartgameone> {
             .getAnswer(); //This is put on top of the line below because the line below changes the qnum index, and we need it to get the correct ans
     bool isCorrect = quizBrain.checkAnswer(choicNo);
     setState(() {
-      if (isCorrect == false && quizBrain.getTotalQuestionsAsked() > 10) {
+      if (isCorrect == false && quizBrain.getTotalQuestionsAsked() > 1) {
         Alert(
           context: context,
           type: AlertType.error,
@@ -53,7 +53,7 @@ class _DartgameoneState extends State<Dartgameone> {
           ],
         ).show();
       }
-      if (quizBrain.getTotalQuestionsAsked() <= 3) {
+      if (quizBrain.getTotalQuestionsAsked() <= 10) {
         quizBrain
             .nextQuestion(); //as button has been pressed the nextQuestion needs to be invoked, this will change the qnum and as the app refreshes the getQuestion will show the new question
       } else {

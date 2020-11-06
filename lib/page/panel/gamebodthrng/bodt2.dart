@@ -21,7 +21,7 @@ class Bodt2 extends StatefulWidget {
 class _Bodt2State extends State<Bodt2> {
   Widget startgame() {
     return Container(
-      width: 270.0,
+      width: 200.0,
       height: 110.0,
       decoration: BoxDecoration(
           image: DecorationImage(

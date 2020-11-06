@@ -141,7 +141,7 @@ class _Bod31State extends State<Bod31> {
   Widget title() {
     return Container(
       child: Text(
-        "ບົດທີ31: ດອກບົວກາງບຶງ",
+        "ບົດທີ38: ດອກບົວກາງບຶງ",
         style: TextStyle(
             color: Colors.black,
             fontSize: 20.0,
