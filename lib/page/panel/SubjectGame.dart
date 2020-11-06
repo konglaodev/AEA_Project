@@ -6,6 +6,14 @@ class SubjectGame extends StatefulWidget {
 }
 
 class _SubjectGameState extends State<SubjectGame> {
+  Widget hint() {
+    return Container(
+      child: FlatButton(onPressed: () {
+          Navigator.pushNamed(context, '/howtoplayapp');
+        }, child: Image.asset("images/Maiy tharm.png",width: 50,)),
+    );
+  }
+
   Widget bothienandgame() {
     return SizedBox(
       width: 250,
@@ -37,7 +45,7 @@ class _SubjectGameState extends State<SubjectGame> {
       height: 50,
       child: FlatButton(
         onPressed: () {
-         Navigator.pushNamed(context, '/Home');
+          Navigator.pushNamed(context, '/Home');
         },
         child: Image.asset('images/backbt.png'),
       ),
@@ -56,8 +64,10 @@ class _SubjectGameState extends State<SubjectGame> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 btback(),
+                hint()
               ],
             ),
             Row(

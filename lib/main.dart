@@ -1,3 +1,4 @@
+import 'package:primaryschool/page/howtoplay.dart';
 import 'package:primaryschool/page/panel/firstpage.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
@@ -28,6 +29,9 @@ import 'package:primaryschool/page/panel/gamebodthrng/bodt2.dart';
 import 'package:primaryschool/page/panel/gamebodthrng/bodt44/bod44.dart';
 import 'package:primaryschool/page/panel/gamebodthrng/gamebodt2.dart';
 import 'package:primaryschool/page/panel/gamebodthrng/gamebodthrng.dart';
+import 'package:primaryschool/page/panel/gamebodthrng/howgame3.dart';
+import 'package:primaryschool/page/panel/howgame4.dart';
+import 'package:primaryschool/page/panel/howtoplaygame2.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lesson6.dart';
 import 'component/Playaudio.dart';
 import 'package:primaryschool/page/soundpage/audiobook/lession1.dart';
@@ -352,8 +356,13 @@ class MyApp extends StatelessWidget {
         '/bodthrngls58game': (context) => Bod58(), //gamebt bod t 58 play
 
         //tutorial
+        //how to play app
+         '/howtoplayapp': (context) => HOWTOPLAY(),
                 //game tutorial
          '/game1howto': (context) => Howgame1(),
+         '/game2howto': (context) => HOOW2(),
+         '/game3howto': (context) => Howgame3(),
+         '/game4howto': (context) => Howto4(),
         
       },
     );

@@ -55,7 +55,7 @@ class _Bodt2State extends State<Bodt2> {
               image: AssetImage('images/hint.png'), fit: BoxFit.fill)),
       child: FlatButton(
         onPressed: () {
-          Navigator.pushNamed(context, '/bodthrngls17game');
+          Navigator.pushNamed(context, '/game3howto');
         },
       ),
     );
